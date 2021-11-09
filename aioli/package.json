@@ -4,7 +4,12 @@
   "main": "index.js",
   "repository": "https://github.com/Chameh96/Project-3.git",
   "author": "Chameh96 <edward.chamberlain2009@gmail.com>",
+  "type": "module",
   "license": "MIT",
+  "scripts": {
+    "serve": "npx nodemon index.js",
+    "seed": "node db/seeds.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
