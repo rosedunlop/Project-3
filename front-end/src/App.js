@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import Home from './pages/Home.js'
+import Home from './pages/Home.js'
+import Nav from './components/Nav.js'
 
 const App = () => {
   useEffect(() => {
@@ -19,8 +20,7 @@ const App = () => {
   return (
     <Router>
       <header>
-        <h1> Hello World</h1>
-        <Nav />
+        <Nav/>
       </header>
       <main>
         <Switch>
