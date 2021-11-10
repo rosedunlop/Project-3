@@ -11,3 +11,4 @@ export const getUserProfile = async (req, res) => {
         return res.status(404).json({ message: 'Not Found'})
     }
 }
+

@@ -24,7 +24,7 @@ const startServers = async() => {
     })
 
     //Router
-    app.use(router)
+    app.use('/api', router)
 
     //CATCH ALL
     app.use((_req, res) => {
