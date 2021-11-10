@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import Home from './pages/Home.js'
+import Home from './pages/Home.js'
+import Header from './components/Header.js'
+import Footer from './components/Footer.js'
 
 const App = () => {
   useEffect(() => {
@@ -19,14 +21,16 @@ const App = () => {
   return (
     <Router>
       <header>
-        <h1> Hello World</h1>
-        <Nav />
+        <Header />
       </header>
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
         </Switch>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </Router>
   )
 }
