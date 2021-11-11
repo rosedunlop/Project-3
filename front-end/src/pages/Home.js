@@ -20,31 +20,35 @@ const Home = () => {
     getAllRecipes()
   }, [])
 
-  const filteredRecipes = recipes.slice(10, 17)
+  const filteredRecipes = recipes.slice(10, 16)
   console.log(filteredRecipes)
 
   return (
     <>
-      {/* <div className='main-recipe-container'>
-        <div className='description'>
-          <h1>{recipes[2].title}</h1>
-          <p>{recipes[2].description}</p>
-          <button>+</button>
-        </div>
-        <div className='image'>
-          <img src={recipes[2].image} alt="recipe-image"/>
-        </div>
-      </div>
-      <div className="top-recipes">
-        <h4>This Weeks Top Recipes</h4>
-        <div className="recipe-card">
-          {filteredRecipes.map((recipe) => (
-            <div key={recipe._id}>
-              <RecipeHomeCard {...recipe} />
-            </div> 
-          ))}
-        </div>
-      </div>      */}
+      {recipes.length && (
+        <>
+          <div className='main-recipe-container'>
+            <div className='description'>
+              <h1>{recipes[2].title}</h1>
+              <p>{recipes[2].description}</p>
+              <button className='button'>+</button>
+            </div>
+            <div className='image'>
+              <img src={recipes[2].image} alt='recipe-image' />
+            </div>
+          </div>
+          <div className='top-recipes'>
+            <h4 className='heading-recipe'>This Weeks Top Recipes</h4>
+            <div className='recipe-card'>
+              {filteredRecipes.map((recipe) => (
+                <div className='card' key={recipe._id}>
+                  <RecipeHomeCard {...recipe} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </>
   )
 }

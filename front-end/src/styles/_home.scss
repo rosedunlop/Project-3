@@ -1,0 +1,130 @@
+.main-recipe-container {
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  background-color: black;
+
+  .description {
+    font-family: $content;
+    width: 50%;
+    color: white;
+    border-right: 2px solid white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+  }
+
+  h1 {
+    width: 34vw;
+    font-size: 60px;
+    text-align: left;
+  }
+
+  p {
+    width: 40vw;
+    font-size: 22px;
+    font-weight: 100;
+  }
+
+  .image {
+    width: 50%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+  }
+
+  img {
+    width: 45vw;
+  }
+  .button {
+    height: 40px;
+    background: white;
+    color: black;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    left: 500px;
+  }
+  .button:hover {
+    background: black;
+    color: white;
+  }
+}
+
+.top-recipes {
+  font-family: $header;
+  margin-bottom: 100px;
+
+  .heading-recipe {
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    padding-top: 60px;
+  }
+
+  .recipe-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 20px;
+
+    .card {
+      width: 30vw;
+      height: 360px;
+      padding: 10px;
+      border: none;
+
+      img {
+        width: 335px;
+        height: 265px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 90%;
+        position: absolute;
+        bottom: 0px;
+      }
+      .para {
+        color: #999;
+        position: relative;
+        top: 10px;
+      }
+
+      .second-button {
+        height: 40px;
+        background: black;
+        color: white;
+        width: 40px;
+        border-radius: 50%;
+        border: 3px solid black;
+        font-size: 21px;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        bottom: 8px;
+        right: 10px;
+      }
+
+      .second-button:hover {
+        background: white;
+        border: 3px solid black;
+        color: black;
+      }
+
+      .heading-four {
+        padding-top: 5px;
+        font-size: 20px;
+        width: 80%;
+      }
+    }
+  }
+}

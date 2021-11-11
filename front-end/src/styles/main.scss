@@ -1,9 +1,11 @@
 @import 'fonts';
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'header';
 @import 'nav';
 @import 'footer';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'about';
+@import 'home';
+@import 'recipeList';
 
 * {
   box-sizing: border-box;

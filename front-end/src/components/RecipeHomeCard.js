@@ -4,9 +4,11 @@ const RecipeHomeCard = ({ image, title, time }) => {
   return (
     <>
       <img src={image} alt=""/>
-      <h4>{title}</h4>
-      <p>{`Cook: ${time} minutes`}</p>
-      <button>+</button>
+      <h4 className="heading-four">{title}</h4>
+      <div className="flex-container">
+      <p className="para">{`Cook: ${time} minutes`}</p>
+      <button className="second-button">+</button>
+      </div>
     </>
   )
 }

@@ -5,6 +5,7 @@ import Home from './pages/Home.js'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import About from './pages/About.js'
+import RecipeList from './pages/Recipes.js'
 
 const App = () => {
   useEffect(() => {
@@ -24,8 +25,9 @@ const App = () => {
       <Header />
       <main>
         <Switch>
-          <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
+          <Route path='/recipes' component={RecipeList} />
+          <Route exact path='/' component={Home} />
         </Switch>
       </main>
       <Footer />
