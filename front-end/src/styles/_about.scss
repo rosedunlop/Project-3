@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-family: $content;
+    font-size: 2rem;
+    margin: 10px;
+  }
+  p {
+    font-family: $content;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px;
+  }
+}

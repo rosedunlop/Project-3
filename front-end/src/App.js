@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
+import About from './pages/About.js'
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
         </Switch>
       </main>
       <footer>
