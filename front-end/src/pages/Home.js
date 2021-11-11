@@ -33,17 +33,17 @@ const Home = () => {
         <div className='description'>
           <h1>{recipes[2].title}</h1>
           <p>{recipes[2].description}</p>
-          <button>+</button>
+          <button className="button">+</button>
         </div>
         <div className='image'>
           <img src={recipes[2].image} alt="recipe-image"/>
         </div>
       </div>
       <div className="top-recipes">
-        <h4>This Weeks Top Recipes</h4>
+        <h4 className="heading-recipe">This Weeks Top Recipes</h4>
         <div className="recipe-card">
           {filteredRecipes.map((recipe) => (
-            <div key={recipe._id}>
+            <div className="card" key={recipe._id}>
               <RecipeHomeCard {...recipe} />
             </div> 
           ))}
