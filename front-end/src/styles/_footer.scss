@@ -1,0 +1,19 @@
+footer {
+  min-height: 250px;
+  padding-left: 48px;
+  padding-right: 48px;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-footer {
+  color: white;
+  font-family: $header;
+}
