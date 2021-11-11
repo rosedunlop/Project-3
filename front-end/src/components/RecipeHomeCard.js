@@ -1,12 +1,13 @@
 import React from 'react'
 
-const RecipeHomeCard = () => {
+const RecipeHomeCard = ({ image, title, time }) => {
   return (
-    <div>
-      <img src="" alt=""/>
-      <h4></h4>
-      <p></p>
-    </div>
+    <>
+      <img src={image} alt=""/>
+      <h4>{title}</h4>
+      <p>{`Cook: ${time} minutes`}</p>
+      <button>+</button>
+    </>
   )
 }
 
