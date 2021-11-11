@@ -11212,21 +11212,25 @@ main {
   margin-top: 50px;
 }
 main section {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main section .about-text {
+section .about-text {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main section h2, main section .h2 {
+section h2, section .h2 {
   font-family: "Crimson Pro", serif;
   font-size: 2rem;
   margin: 10px;
 }
 main section p {
+section p {
   font-family: "Crimson Pro", serif;
   font-size: 1.5rem;
   text-align: center;
