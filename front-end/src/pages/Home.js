@@ -21,12 +21,14 @@ const Home = () => {
     getAllRecipes()
   }, [])
   
-  const filteredRecipes = recipes.slice(10, 17)
+  const filteredRecipes = recipes.slice(10, 16)
   console.log(filteredRecipes)
 
 
   return (
     <>
+     {recipes.length &&
+     <> 
       <div className='main-recipe-container'>
         <div className='description'>
           <h1>{recipes[2].title}</h1>
@@ -46,7 +48,9 @@ const Home = () => {
             </div> 
           ))}
         </div>
-      </div>     
+      </div> 
+      </>    
+    }
     </>
   )
 }
