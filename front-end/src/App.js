@@ -21,18 +21,14 @@ const App = () => {
 
   return (
     <Router>
-      <header>
-        <Header />
-      </header>
+      <Header />
       <main>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
         </Switch>
       </main>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </Router>
   )
 }

@@ -1,5 +1,5 @@
 footer {
-  min-height: 250px;
+  height: 100px;
   padding-left: 48px;
   padding-right: 48px;
   background-color: black;
@@ -7,13 +7,28 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-.footer-container {
   display: flex;
-}
+  justify-content: space-between;
+  align-items: center;
 
-.footer-footer {
-  color: white;
-  font-family: $header;
+  .footer-nav {
+    height: 100%;
+    width: 50%;
+
+    ul {
+      color: white;
+      list-style: none;
+      display: flex;
+
+      li {
+        padding: 10px;
+      }
+    }
+  }
+
+  .footer-footer {
+    color: white;
+    font-family: $header;
+    width: 50%;
+  }
 }

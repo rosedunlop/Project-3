@@ -9,19 +9,30 @@ const OffcanvasNav = () => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const handleShow = () => (!show ? setShow(true) : setShow(false))
 
   return (
     <>
       <Hamburger toggled={show} toggle={handleShow} />
 
-      <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+      <Offcanvas var='--bs-dark' show={show} onHide={handleClose}>
+        <Offcanvas.Header>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <div>
+            <ul className='offcanvas-auth'>
+              <li>Login</li>
+              <li>Create an account</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Recipes</li>
+              <li>Home</li>
+              <li>About</li>
+            </ul>
+          </div>
         </Offcanvas.Body>
       </Offcanvas>
     </>

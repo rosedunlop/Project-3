@@ -1,9 +1,9 @@
-@import "fonts";
-@import "header";
-@import "nav";
-@import "footer";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "about";
+@import 'fonts';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'header';
+@import 'nav';
+@import 'footer';
+@import 'about';
 
 * {
   box-sizing: border-box;
