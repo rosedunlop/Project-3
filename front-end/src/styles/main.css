@@ -11292,6 +11292,122 @@ h4, .h4 {
   text-size-adjust: 1rem;
   height: 60px;
   overflow: hidden;
+.main-recipe-container {
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  background-color: black;
+}
+.main-recipe-container .description {
+  font-family: "Crimson Pro", serif;
+  width: 50%;
+  color: white;
+  border-right: 2px solid white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 30px;
+}
+.main-recipe-container h1, .main-recipe-container .h1 {
+  width: 34vw;
+  font-size: 60px;
+  text-align: left;
+}
+.main-recipe-container p {
+  width: 40vw;
+  font-size: 22px;
+  font-weight: 100;
+}
+.main-recipe-container .image {
+  width: 50%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 30px;
+}
+.main-recipe-container img {
+  width: 45vw;
+}
+.main-recipe-container .button {
+  height: 40px;
+  background: white;
+  color: black;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  font-size: 21px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  left: 500px;
+}
+.main-recipe-container .button:hover {
+  background: black;
+  color: white;
+}
+
+.top-recipes {
+  font-family: "Libre Franklin", sans-serif;
+  margin-bottom: 100px;
+}
+.top-recipes .heading-recipe {
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+  padding-top: 60px;
+}
+.top-recipes .recipe-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100vw;
+  padding: 20px;
+}
+.top-recipes .recipe-card .card {
+  width: 30vw;
+  height: 360px;
+  padding: 10px;
+  border: none;
+}
+.top-recipes .recipe-card .card img {
+  width: 335px;
+  height: 265px;
+}
+.top-recipes .recipe-card .card .flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  position: absolute;
+  bottom: 0px;
+}
+.top-recipes .recipe-card .card .para {
+  color: #999;
+  position: relative;
+  top: 10px;
+}
+.top-recipes .recipe-card .card .second-button {
+  height: 40px;
+  background: black;
+  color: white;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid black;
+  font-size: 21px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  bottom: 8px;
+  right: 10px;
+}
+.top-recipes .recipe-card .card .second-button:hover {
+  background: white;
+  border: 3px solid black;
+  color: black;
+}
+.top-recipes .recipe-card .card .heading-four {
+  padding-top: 5px;
+  font-size: 20px;
+  width: 80%;
 }
 
 * {
