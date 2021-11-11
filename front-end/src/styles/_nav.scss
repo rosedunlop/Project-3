@@ -1,5 +1,5 @@
 .header-nav {
-  display: block;
+  display: flex;
   ul {
     display: flex;
     list-style: none;
@@ -8,8 +8,31 @@
       font-size: 16px;
       font-weight: 500;
       padding: 6px 12px;
-      display: block;
+      // display: inline;
       font-family: $header;
+      padding-left: 36px;
     }
   }
 }
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// .nav-toggle {
+//   position: absolute;
+//   left: 15px;
+//   top: 35;
+//   z-index: 101;
+//   height: 30px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   line-height: 1.4;
+//   font-size: 20px;
+//   padding: 0;
+//   margin: 0;
+//   color: white;
+// }

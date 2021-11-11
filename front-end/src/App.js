@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
-import Nav from './components/Nav.js'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import About from './pages/About.js'
@@ -23,7 +22,6 @@ const App = () => {
   return (
     <Router>
       <header>
-        <Nav/>
         <Header />
       </header>
       <main>

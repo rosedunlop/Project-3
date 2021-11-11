@@ -2,7 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 // import Button from './Button.js'
-import Button from 'react-bootstrap/Button'
+import { Squash as Hamburger } from 'hamburger-react'
+// import Button from 'react-bootstrap/Button'
 
 const OffcanvasNav = () => {
   const [show, setShow] = useState(false)
@@ -12,9 +13,7 @@ const OffcanvasNav = () => {
 
   return (
     <>
-      <Button variant='primary' onClick={handleShow}>
-        Launch
-      </Button>
+      <Hamburger toggled={show} toggle={handleShow} />
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
