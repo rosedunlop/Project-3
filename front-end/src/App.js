@@ -6,6 +6,7 @@ import Nav from './components/Nav.js'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import About from './pages/About.js'
+import RecipeList from './pages/Recipes.js'
 
 const App = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const App = () => {
       <main>
         <Switch>
           <Route path='/about' component={About} />
+          <Route path='/recipes' component={RecipeList} />
           <Route exact path='/' component={Home} />
         </Switch>
       </main>

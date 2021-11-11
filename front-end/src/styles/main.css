@@ -11212,25 +11212,22 @@ main {
   margin-top: 50px;
 }
 main section {
-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 main section .about-text {
-section .about-text {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
 }
 main section h2, main section .h2 {
-section h2, section .h2 {
   font-family: "Crimson Pro", serif;
   font-size: 2rem;
   margin: 10px;
 }
 main section p {
-section p {
   font-family: "Crimson Pro", serif;
   font-size: 1.5rem;
   text-align: center;
@@ -11250,6 +11247,51 @@ section p {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+
+.recipeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.oneRecipe {
+  height: 450px;
+  width: 300px;
+  margin: 20px;
+  margin-bottom: 10px;
+  background-color: #022e2e;
+  color: white;
+  border-radius: 5px;
+}
+
+div :hover {
+  border-bottom: 3px solid orange;
+  border-right: 3px solid orange;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+img:hover {
+  border-right: 3px solid orange;
+}
+
+h4:hover, .h4:hover {
+  border: none;
+}
+
+p:hover {
+  border: none;
+}
+
+h4, .h4 {
+  text-size-adjust: 1rem;
+  height: 60px;
+  overflow: hidden;
 }
 
 * {
