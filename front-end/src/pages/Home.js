@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import RecipeHomeCard from '../components/RecipeHomeCard.js'
+import RecipeHomeCard from '../components/RecipeHomeCard.js'
 
 const Home = () => {
   const [recipes, setRecipes] = useState([])
-  console.log('test')
 
   useEffect(() => {
     const getAllRecipes = async () => {
       try {
-        console.log('test')
         const { data } = await axios.get('/api/recipes')
         console.log(data)
         setRecipes(data)
@@ -23,13 +21,17 @@ const Home = () => {
   const filteredRecipes = recipes.slice(10, 16)
   console.log(filteredRecipes)
 
+  const changedTitle = recipes[2].title
+
+  const beginningTitle = recipes[2].title
+
   return (
     <>
       {recipes.length && (
         <>
           <div className='main-recipe-container'>
             <div className='description'>
-              <h1>{recipes[2].title}</h1>
+              <h1>{beginningTitle.slice(0, 24)}<span>{changedTitle.slice(-13)}</span></h1>
               <p>{recipes[2].description}</p>
               <button className='button'>+</button>
             </div>
