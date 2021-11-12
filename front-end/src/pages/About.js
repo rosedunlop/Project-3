@@ -19,13 +19,13 @@ const About = () => {
         <Row className="squad-photos">
           <Col xs={6} md={4} className='photos'>
             <a href="https://www.linkedin.com/in/rose-dunlop-b0683b21a/" target="_blank" rel="noreferrer">
-            <Image src="https://i.imgur.com/Cdyr2d5.jpg" roundedCircle />
+            <Image src="https://i.imgur.com/MTcei5E.jpg" roundedCircle />
             </a>
             <p>Rose Dunlop</p>
           </Col>
           <Col xs={6} md={4} className='photos'>
             <a href = "https://www.linkedin.com/in/hannah-hill/" target="_blank" rel="noreferrer">
-            <Image src="https://i.imgur.com/vdy819L.jpg" roundedCircle />
+            <Image src="https://i.imgur.com/TRLFyq9.jpg" roundedCircle />
             </a>
             <p>Hannah Hill</p>
           </Col>
