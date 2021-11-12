@@ -66,6 +66,58 @@ header {
       svg {
         height: 100%;
       }
+      svg:hover {
+        cursor: pointer;
+      }
+      input {
+        background-color: black;
+        color: white;
+        border: none;
+        border-bottom: 2px white solid;
+        width: 150px;
+        margin-right: 15px;
+        font-size: 14px;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+.modal {
+  font-family: $header;
+
+  .modal-title {
+    position: relative;
+    margin-top: 30px;
+    left: 70px;
+  }
+
+  .modal-body {
+    margin-top: 30px;
+
+    button {
+      background-color: black;
+      border: black;
+      position: relative;
+      left: 55px;
+      height: 50px;
+      width: 350px;
+      margin-top: 30px;
+      border-radius: 30px;
+    }
+  }
+
+  .modal-footer {
+    button {
+      background-color: grey;
+      border: grey;
+      border-radius: 30px;
     }
   }
 }
