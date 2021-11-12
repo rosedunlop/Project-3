@@ -38,25 +38,34 @@ header {
   }
   .logo-container {
     position: absolute;
-    left: 50%;
+    left: 46.5%;
   }
   .login-container {
     line-height: 1;
     display: flex;
     font-family: $header;
 
-    .auth-button {
-      background: none;
-      border: none;
-      line-height: 1;
-      font-size: 16px;
-      font-weight: 500;
-      padding: 6px 12px;
-      font-family: $header;
-      color: white;
+    .auth-buttons-container {
+      padding-right: 20px;
+
+      .auth-button {
+        background: none;
+        border: none;
+        line-height: 1;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 12px;
+        font-family: $header;
+        color: white;
+      }
+      .login {
+        border-right: 2px solid white;
+      }
     }
-    .login {
-      border-right: 2px solid white;
+    .search-container {
+      svg {
+        height: 100%;
+      }
     }
   }
 }

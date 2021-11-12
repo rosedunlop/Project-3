@@ -4,32 +4,35 @@
   justify-content: space-around;
 }
 .oneRecipe {
-  height: 450px;
+  height: 420px;
   width: 300px;
   margin: 20px;
   margin-bottom: 10px;
-  background-color: rgb(2, 46, 46);
+  background-color: black;
   color: white;
   border-radius: 5px;
 }
-div :hover {
-  border-bottom: 3px solid orange;
+.oneRecipe :hover {
   border-right: 3px solid orange;
 }
 img {
   height: 300px;
   width: 300px;
+  object-fit: cover;
   border-radius: 5px;
+
   //unsure about which method of image sizing to go for (tomorrow Ed, take a look)
 }
-img:hover {
-  border-right: 3px solid orange;
-}
-h4:hover {
-  border: none;
-}
-p:hover {
-  border: none;
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    .button:hover {
+      background: black;
+      color: white;
+    }
+  }
 }
 h4 {
   text-size-adjust: 1rem;
