@@ -21,17 +21,13 @@ const Home = () => {
   const filteredRecipes = recipes.slice(10, 16)
   console.log(filteredRecipes)
 
-  const changedTitle = recipes[2].title
-
-  const beginningTitle = recipes[2].title
-
   return (
     <>
       {recipes.length && (
         <>
           <div className='main-recipe-container'>
             <div className='description'>
-              <h1>{beginningTitle.slice(0, 24)}<span>{changedTitle.slice(-13)}</span></h1>
+              <h1>{recipes[2].title.slice(0, 24)}<span>{recipes[2].title.slice(-13)}</span></h1>
               <p>{recipes[2].description}</p>
               <button className='button'>+</button>
             </div>
