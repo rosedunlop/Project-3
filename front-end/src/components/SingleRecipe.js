@@ -21,6 +21,7 @@ const SingleRecipe = ({ title, image, description, method, ingredients, keywords
       
       <div className='meth-ing'> 
       <div className='line-break' id='ingredients'> 
+      <h3> Ingredients </h3>
           {ingredients.map(str => {
             return (`
               ${str}
@@ -28,6 +29,7 @@ const SingleRecipe = ({ title, image, description, method, ingredients, keywords
           })}
         </div>
         <div className='line-break' id='method'> 
+        <h3> Method </h3>
           {method.map(str => {
             return (`
               ${str}
