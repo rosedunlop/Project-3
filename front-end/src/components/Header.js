@@ -27,12 +27,15 @@ const Header = () => {
               <button className='auth-button'> Register</button>
             </div>
             <div className='search-container'>
-              <FontAwesomeIcon
-                icon={faSearch}
-                className='search-icon'
-                onClick={handleClick}
-              />
-              {showSearchBar && <Search />}
+              {showSearchBar ? (
+                <Search />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  className='search-icon'
+                  onClick={handleClick}
+                />
+              )}
             </div>
           </div>
         </div>

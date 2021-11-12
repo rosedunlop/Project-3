@@ -1,9 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Offcanvas from 'react-bootstrap/Offcanvas'
-// import Button from './Button.js'
 import { Squash as Hamburger } from 'hamburger-react'
-// import Button from 'react-bootstrap/Button'
 
 const OffcanvasNav = () => {
   const [show, setShow] = useState(false)
@@ -28,9 +27,15 @@ const OffcanvasNav = () => {
           </div>
           <div>
             <ul>
-              <li>Recipes</li>
-              <li>Home</li>
-              <li>About</li>
+              <li>
+                <Link to='/recipes'>Recipes</Link>
+              </li>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/about'>About</Link>
+              </li>
             </ul>
           </div>
         </Offcanvas.Body>
