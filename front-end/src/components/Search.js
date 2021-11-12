@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import SearchResults from '../pages/SearchResults'
 
 const Search = () => {
-  const handleSearch = async (event) => {
-    const query = event.target.value
-    console.log(query)
-  }
+  const { search } = window.location
+  const query = new URLSearchParams(search).get('search')
+  const [clicked, setClicked] = useState(false)
+
+  const handleClick = () => setClicked()
 
   return (
     <form>
@@ -14,9 +17,12 @@ const Search = () => {
         placeholder='search recipes'
         name='search'
       ></input>
-      <button type='submit' onSubmit={handleSearch}>
-        search
-      </button>
+      {/* {(!clicked) ? } */}
+      <Link to={SearchResults} query={query}>
+        <button type='submit' onClick={handleClick}>
+          search
+        </button>
+      </Link>
     </form>
   )
 }

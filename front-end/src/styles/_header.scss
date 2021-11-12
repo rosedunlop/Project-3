@@ -58,6 +58,9 @@ header {
         font-family: $header;
         color: white;
       }
+      .auth-button:hover {
+        text-decoration: underline;
+      }
       .login {
         border-right: 2px solid white;
       }
@@ -80,10 +83,11 @@ header {
       }
 
       button {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         border: 2px solid white;
         line-height: 1.4;
+        border-radius: 3px;
       }
     }
   }
