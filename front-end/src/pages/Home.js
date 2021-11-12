@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-// import RecipeHomeCard from '../components/RecipeHomeCard.js'
+import RecipeHomeCard from '../components/RecipeHomeCard.js'
 
 const Home = () => {
   const [recipes, setRecipes] = useState([])

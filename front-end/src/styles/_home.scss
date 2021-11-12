@@ -31,11 +31,12 @@
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 30px;
+    img {
+      width: 45vw;
+      object-fit: cover;
+    }
   }
 
-  img {
-    width: 45vw;
-  }
   .button {
     height: 40px;
     background: white;
@@ -83,6 +84,7 @@
       img {
         width: 335px;
         height: 265px;
+        object-fit: cover;
       }
 
       .flex-container {
