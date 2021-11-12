@@ -60,3 +60,36 @@ header {
     }
   }
 }
+
+.modal {
+  font-family: $header;
+
+  .modal-title {
+    position: relative;
+    margin-top: 30px;
+    left: 70px;
+  }
+
+  .modal-body {
+    margin-top: 30px;
+
+    button {
+      background-color: black;
+      border: black;
+      position: relative;
+      left: 55px;
+      height: 50px;
+      width: 350px;
+      margin-top: 30px;
+      border-radius: 30px;
+    }
+  }
+
+  .modal-footer {
+    button {
+      background-color: grey;
+      border: grey;
+      border-radius: 30px;
+    }
+  }
+}
