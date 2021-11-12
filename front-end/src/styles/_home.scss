@@ -14,10 +14,15 @@
     padding-left: 30px;
   }
 
+  span {
+    font-weight: 900;
+  }
+
   h1 {
     width: 34vw;
     font-size: 60px;
     text-align: left;
+    font-weight: 100;
   }
 
   p {
@@ -58,13 +63,13 @@
 
 .top-recipes {
   font-family: $header;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
+  margin-top: 80px;
 
   .heading-recipe {
     text-align: center;
     font-weight: 500;
     font-size: 25px;
-    padding-top: 60px;
   }
 
   .recipe-card {
@@ -85,6 +90,13 @@
         width: 335px;
         height: 265px;
         object-fit: cover;
+        position: relative;
+        top: 0;
+        transition: top ease 0.5s;
+      }
+
+      img:hover {
+        top: -10px;
       }
 
       .flex-container {
