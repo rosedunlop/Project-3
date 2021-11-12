@@ -1,32 +1,42 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-const SingleRecipe = ({ title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, _id }) => {
+const SingleRecipe = ({ title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author }) => {
   return (
     <>
-    <h2>
-        <Link to={`/api/recipes/${_id}`}>
-        {title}
-        </Link>
-    </h2>
+    
+    <div className='top-half'>
+      
       <img src={image} alt=""/>
-      <p>{description}</p>
       <div className='info-div'>
+        <h2>{title}</h2>
         <p>{`Cook: ${time} minutes`}</p>
         <p>{`Number of servings: ${servings}`}</p>
         <p>{`Difficulty: ${difficulty}`}</p>
         <p>{`Original author: ${author}`}</p>
         <p>{keywords}</p>
+        <p>{`"${description}"`}</p>
       </div>
+      
+      </div>
+      
       <div className='meth-ing'> 
-        <ul>
-            <li>{method}</li>
-        </ul>
-        <ul>
-            <li>{ingredients}</li>
-        </ul>
-        <p>{tips}</p>
+      <div className='line-break' id='ingredients'> 
+          {ingredients.map(str => {
+            return (`
+              ${str}
+            `)
+          })}
+        </div>
+        <div className='line-break' id='method'> 
+          {method.map(str => {
+            return (`
+              ${str}
+            `)
+          })}
+        </div>
+        
       </div>
+      <p>{`Top tips: ${tips}`}</p>
     </>
   )
 }
