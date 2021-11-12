@@ -1,13 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import SearchResults from '../pages/SearchResults'
+// import { Link } from 'react-router-dom'
+// import SearchResults from '../pages/SearchResults'
 
 const Search = () => {
-  const { search } = window.location
-  const query = new URLSearchParams(search).get('search')
-  const [clicked, setClicked] = useState(false)
+  // const { search } = window.location
+  // const query = new URLSearchParams(search).get('search')
+  // const [clicked, setClicked] = useState(false)
+  // const [submit, setSubmit] = useState(false)
 
-  const handleClick = () => setClicked()
+  // const handleSubmit = () => setSubmit(true)
 
   return (
     <form>
@@ -17,12 +18,9 @@ const Search = () => {
         placeholder='search recipes'
         name='search'
       ></input>
-      {/* {(!clicked) ? } */}
-      <Link to={SearchResults} query={query}>
-        <button type='submit' onClick={handleClick}>
-          search
-        </button>
-      </Link>
+      <button type='submit' value=''>
+        search
+      </button>
     </form>
   )
 }
