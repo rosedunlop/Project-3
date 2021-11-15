@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
@@ -7,8 +7,10 @@ import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
+import SearchRecipe from './components/SearchRecipe.js'
 
 const App = () => {
+  const [searchValue, setSearchValue] = useState('')
   useEffect(() => {
     const getData = async () => {
       try {
@@ -23,12 +25,18 @@ const App = () => {
 
   return (
     <Router>
-      <Header />
+      <Header searchValue={searchValue} setSearchValue={setSearchValue} />
       <main>
         <Switch>
           <Route path='/about' component={About} />
           <Route path='/recipes/:id' component={RecipeShow} />
           <Route path='/recipes' component={RecipeList} />
+          <Route
+            path='/search'
+            component={(searchValue) => (
+              <SearchRecipe searchValue={searchValue} />
+            )}
+          />
           <Route exact path='/' component={Home} />
         </Switch>
       </main>

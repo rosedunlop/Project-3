@@ -7,7 +7,7 @@ import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const Header = () => {
+const Header = ({ searchValue, setSearchValue }) => {
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShowLogin(false)
   const handleShow = () => setShowLogin(true)
@@ -49,7 +49,10 @@ const Header = () => {
             </div>
             <div className='search-container'>
               {showSearchBar ? (
-                <Search />
+                <Search
+                  searchValue={searchValue}
+                  setSearchValue={setSearchValue}
+                />
               ) : (
                 <FontAwesomeIcon
                   icon={faSearch}
