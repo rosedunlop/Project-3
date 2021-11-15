@@ -1,13 +1,17 @@
-@import 'fonts';
-@import 'header';
-@import 'nav';
-@import 'footer';
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'about';
-@import 'home';
-@import 'recipeList';
+@import "fonts";
+@import "header";
+@import "nav";
+@import "footer";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "about";
+@import "home";
+@import "recipeList";
+@import "singleRecipe";
 
 * {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  padding-bottom: 100px;
 }

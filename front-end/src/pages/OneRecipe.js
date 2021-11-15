@@ -1,47 +1,26 @@
 import React from 'react'
-import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
 import SingleRecipe from '../components/SingleRecipe'
+import { useParams } from 'react-router'
+import { fetchRecipe } from '../helpers/api'
 
 const RecipeShow = () => {
-    const [recipe, setRecipe] = useState([])
-    const { _id } = useParams()
+    const [recipe, setRecipe] = useState(null)
+    const { id } = useParams()
+    console.log('End of the world')
     // const history = useHistory()
 
     useEffect(() => {
-        async function fetchRecipe() {
-            const config = {
-                method: 'get',
-                url: `/api/recipes/${_id}`,
-                headers: {}
-            }
-            const response = await axios(config)
-            setRecipe(response.data)
-        }
-        fetchRecipe()
-    }, [])
-
-
+        fetchRecipe(id).then(setRecipe)
+    }, [id])
 
     return (
         <>
-        {recipe.length && (
+        {recipe && (
             <section>
                 <div className='single-recipe'>
-                    <h2>{recipe.title}</h2>
-                    <p>
-                    <Link to={`/recipes/${_id}/edit`}>Edit this recipe</Link>
-                    </p>
-                    {recipe.map((recipes) => (
-                    <div key={recipes._id} className='oneRecipe'>
-                        <SingleRecipe {...recipe} />
-                    </div>
-                    ))}
-
-
+                    <SingleRecipe {...recipe} />
                  </div>
-
             </section>
         )}
         </>

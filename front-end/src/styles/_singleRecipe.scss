@@ -1,0 +1,39 @@
+.single-recipe {
+  h2 {
+    text-align: center;
+  }
+  .top-half {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d8d8dd;
+
+    img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  .info-div {
+    width: 50%;
+  }
+  .meth-ing {
+    display: flex;
+    border-bottom: 2px solid #d8d8dd;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    .line-break {
+      white-space: pre-line;
+    }
+    #ingredients {
+      width: 40%;
+      padding-left: 30px;
+    }
+    #method {
+      width: 60%;
+      padding-right: 30px;
+      padding-left: 30px;
+      border-left: 2px dotted #d8d8dd;
+    }
+  }
+}
