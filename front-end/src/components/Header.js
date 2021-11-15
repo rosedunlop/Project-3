@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import Nav from './Nav.js'
-import Search from './Search.js'
+import SearchBar from './SearchBar.js'
 import OffcanvasNav from './Offcanvas.js'
 import ModalRegister from './ModalRegister.js'
 import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-const Header = ({ searchValue, setSearchValue }) => {
+const Header = () => {
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShowLogin(false)
   const handleShow = () => setShowLogin(true)
@@ -49,10 +49,7 @@ const Header = ({ searchValue, setSearchValue }) => {
             </div>
             <div className='search-container'>
               {showSearchBar ? (
-                <Search
-                  searchValue={searchValue}
-                  setSearchValue={setSearchValue}
-                />
+                <SearchBar />
               ) : (
                 <FontAwesomeIcon
                   icon={faSearch}
