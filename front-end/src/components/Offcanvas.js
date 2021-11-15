@@ -21,8 +21,12 @@ const OffcanvasNav = () => {
         <Offcanvas.Body>
           <div>
             <ul className='offcanvas-auth'>
-              <li>Login</li>
-              <li>Create an account</li>
+              <li>
+                <Link to='/login'>Login</Link>
+              </li>
+              <li>
+                <Link to='/register'>Create an account</Link>
+              </li>
             </ul>
           </div>
           <div>
