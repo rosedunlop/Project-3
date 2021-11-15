@@ -2,23 +2,63 @@ import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import axios from 'axios'
+import { setToken } from '../helpers/auth'
 
-const ModalLogin = ({ showLogin, handleClose }) => {
-  const [email, setEmail] = useState('')
+const ModalLogin = ({
+  showLogin,
+  handleClose,
+  setIsLoggedIn,
+  handleShowRegister
+}) => {
+  const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [isError, setIsError] = useState(false)
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+
+    const data = {
+      username,
+      password
+    }
+
+    const config = {
+      method: 'post',
+      url: '/api/login',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: data
+    }
+    try {
+      const response = await axios(config)
+      console.log(response)
+
+      setToken(response.data.token)
+      setIsLoggedIn(true)
+      setIsError(false)
+      handleClose(true)
+    } catch (err) {
+      console.error(err)
+      setIsError(true)
+    }
   }
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value)
-    console.log(email)
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value)
+    console.log(username)
   }
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
     console.log(password)
+  }
+
+  const handleOption = () => {
+    handleClose()
+    handleShowRegister()
+    return
   }
 
   return (
@@ -40,12 +80,12 @@ const ModalLogin = ({ showLogin, handleClose }) => {
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Username</Form.Label>
               <Form.Control
-                type='email'
-                placeholder='Enter email'
-                value={email}
-                onChange={handleEmailChange}
+                type='text'
+                placeholder='Enter username'
+                value={username}
+                onChange={handleUsernameChange}
               />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicPassword'>
@@ -57,14 +97,30 @@ const ModalLogin = ({ showLogin, handleClose }) => {
                 onChange={handlePasswordChange}
               />
             </Form.Group>
-            <Button className='login-button' variant='primary' type='submit'>
+            {isError ? (
+              <div className='error'>
+                <p>Incorrect username or password.</p>
+              </div>
+            ) : (
+              <></>
+            )}
+            <Button
+              className='login-button'
+              variant='primary'
+              type='submit'
+              value='Login'
+            >
               Login
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
           <label>Not a member yet?</label>
-          <Button className='not-member-button' variant='secondary'>
+          <Button
+            className='not-member-button'
+            variant='secondary'
+            onClick={handleOption}
+          >
             Join aioli
           </Button>
         </Modal.Footer>
