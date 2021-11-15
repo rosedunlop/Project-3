@@ -38,7 +38,7 @@ const SearchResults = () => {
             ) : (
               <h3>
                 Sorry, no results for your search {query}. <br />
-                <Link to='RecipeList'>Browse all recipes here.</Link>{' '}
+                <Link to='/recipes'>Browse all recipes here.</Link>{' '}
               </h3>
             )}
           </div>

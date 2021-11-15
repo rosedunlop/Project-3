@@ -6,12 +6,13 @@ import ModalRegister from './ModalRegister.js'
 import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { removeToken } from '../helpers/auth.js'
+import Button from 'react-bootstrap/Button'
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   const history = useHistory()
-  
+
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShowLogin(false)
   const handleShow = () => setShowLogin(true)
@@ -44,18 +45,41 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
             <div className='auth-buttons-container'>
               {isLoggedIn ? (
                 <>
-                 <Button className='auth-button' onClick={handleLogout}>Logout</Button>
+                  <Link to='/account'>
+                    <Button className='auth-button account'>Account</Button>
+                  </Link>
+                  <Button className='auth-button' onClick={handleLogout}>
+                    Logout
+                  </Button>
                 </>
               ) : (
                 <>
-                <Button className='auth-button login' variant="primary" onClick={handleShow}>Login</Button>
-                <ModalLogin showLogin={showLogin} handleClose={handleClose} setIsLoggedIn={setIsLoggedIn} handleShowRegister={handleShowRegister} />
+                  <Button
+                    className='auth-button login'
+                    variant='primary'
+                    onClick={handleShow}
+                  >
+                    Login
+                  </Button>
+                  <ModalLogin
+                    showLogin={showLogin}
+                    handleClose={handleClose}
+                    setIsLoggedIn={setIsLoggedIn}
+                    handleShowRegister={handleShowRegister}
+                  />
+
+                  <Button className='auth-button' onClick={handleShowRegister}>
+                    {' '}
+                    Register
+                  </Button>
+                  <ModalRegister
+                    showRegister={showRegister}
+                    handleCloseRegister={handleCloseRegister}
+                    setIsLoggedIn={setIsLoggedIn}
+                    handleShow={handleShow}
+                  />
                 </>
-              )
-            }
-             
-            <Button className='auth-button' onClick={handleShowRegister}> Register</Button>
-            <ModalRegister showRegister={showRegister} handleCloseRegister={handleCloseRegister} setIsLoggedIn={setIsLoggedIn} handleShow={handleShow} />   
+              )}
             </div>
             <div className='search-container'>
               {showSearchBar ? (
