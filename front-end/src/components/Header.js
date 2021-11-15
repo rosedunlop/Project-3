@@ -8,11 +8,9 @@ import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom'
-import { getToken, removeToken } from '../helpers/auth.js'
+import { removeToken } from '../helpers/auth.js'
 
-
-
-const Header = () => {
+const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   const history = useHistory()
   
   const [showLogin, setShowLogin] = useState(false)
@@ -28,17 +26,10 @@ const Header = () => {
   const [showSearchBar, setShowSearchBar] = useState(false)
   const handleClick = () => setShowSearchBar(true)
 
-  const isUserLoggedIn = () => {
-    if (getToken()) {
-      return true
-    }
-    return false
-  }
-
   const handleLogout = () => {
     removeToken()
+    setIsLoggedIn(false)
     history.push('/')
-    // location.reload()
   }
 
   return (
@@ -54,20 +45,20 @@ const Header = () => {
           </div>
           <div className='login-container'>
             <div className='auth-buttons-container'>
-              {!isUserLoggedIn() ? (
-                <>
-                <Button className='auth-button login' variant="primary" onClick={handleShow}>Login</Button>
-                <ModalLogin showLogin={showLogin} handleClose={handleClose}/>
-                </>
-              ) : (
+              {isLoggedIn ? (
                 <>
                  <Button className='auth-button' onClick={handleLogout}>Logout</Button>
                 </>
+              ) : (
+                <>
+                <Button className='auth-button login' variant="primary" onClick={handleShow}>Login</Button>
+                <ModalLogin showLogin={showLogin} handleClose={handleClose} setIsLoggedIn={setIsLoggedIn} handleShowRegister={handleShowRegister} />
+                </>
               )
             }
-
+             
             <Button className='auth-button' onClick={handleShowRegister}> Register</Button>
-            <ModalRegister showRegister={showRegister} handleCloseRegister={handleCloseRegister} />   
+            <ModalRegister showRegister={showRegister} handleCloseRegister={handleCloseRegister} setIsLoggedIn={setIsLoggedIn} handleShow={handleShow} />   
             </div>
             <div className='search-container'>
               {showSearchBar ? (

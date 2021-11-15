@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Header from './components/Header.js'
@@ -7,23 +6,23 @@ import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
+import { getToken } from './helpers/auth.js'
 
 const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get('/api/recipes')
-        console.log(data)
-      } catch (err) {
-        console.log(err)
-      }
+    if (getToken()) {
+      setIsLoggedIn(true)
+    } else {
+      setIsLoggedIn(false)
     }
-    getData()
   }, [])
 
+  
   return (
     <Router>
-      <Header />
+      <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <main>
         <Switch>
           <Route path='/about' component={About} />

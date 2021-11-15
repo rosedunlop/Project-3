@@ -5,9 +5,10 @@ import Button from 'react-bootstrap/Button'
 import axios from 'axios'
 import { setToken } from '../helpers/auth'
 
-const ModalLogin = ({ showLogin, handleClose }) => {
+const ModalLogin = ({ showLogin, handleClose, setIsLoggedIn, handleShowRegister }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [isError, setIsError] = useState(false)
   
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -30,10 +31,13 @@ const ModalLogin = ({ showLogin, handleClose }) => {
       console.log(response)
 
       setToken(response.data.token)
+      setIsLoggedIn(true)
+      setIsError(false)
       handleClose(true)
       
     } catch (err) {
       console.error(err)
+      setIsError(true)
     }
 
   }
@@ -46,6 +50,12 @@ const ModalLogin = ({ showLogin, handleClose }) => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
     console.log(password)
+  }
+
+  const handleOption = () => {
+    handleClose()
+    handleShowRegister()
+    return
   }
 
     return (
@@ -64,12 +74,19 @@ const ModalLogin = ({ showLogin, handleClose }) => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" value={password} onChange={handlePasswordChange}/>
                   </Form.Group> 
+                  {isError ? (
+                    <div className="error">
+                      <p>Incorrect username or password.</p>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <Button className="login-button" variant="primary" type="submit" value="Login">Login</Button>   
                 </Form>
               </Modal.Body>
               <Modal.Footer>
                 <label>Not a member yet?</label>
-                <Button className="not-member-button" variant="secondary">Join aioli</Button>
+                <Button className="not-member-button" variant="secondary" onClick={handleOption}>Join aioli</Button>
               </Modal.Footer>
             </Modal>
         </>
