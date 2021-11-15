@@ -6,13 +6,10 @@ const SearchBar = () => {
   const handleChange = (event) => {
     setSearchValue(event.target.value)
   }
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log('Search starting')
-  }
+
   return (
     <div>
-      <form action='/' method='get' autoComplete='off' onSubmit={handleSubmit}>
+      <form action='/' method='get' autoComplete='off'>
         <input
           type='text'
           id='header-search'

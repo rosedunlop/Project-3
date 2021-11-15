@@ -6,9 +6,12 @@ import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
+//import AddRecipe from './pages/AddRecipe.js'
+import AddRecipeNew from './pages/AddRecipeNew.js'
 import { getToken } from './helpers/auth.js'
 import AddRecipe from './pages/AddRecipe.js'
 import SearchResults from './pages/SearchResults.js'
+import Account from './pages/Account.js'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -29,6 +32,8 @@ const App = () => {
       <main>
         <Switch>
           <Route path='/about' component={About} />
+          <Route path='/recipes/new' component={AddRecipeNew} />
+          <Route path='/account' component={Account} />
           <Route path='/recipes/new' component={AddRecipe} />
           <Route path='/recipes/:id' component={RecipeShow} />
           <Route path='/recipes' component={RecipeList} />
