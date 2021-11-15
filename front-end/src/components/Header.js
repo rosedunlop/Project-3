@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router-dom'
 import { removeToken } from '../helpers/auth.js'
+import Button from 'react-bootstrap/Button'
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   const history = useHistory()
@@ -34,7 +35,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
       <header>
         <div className='header-container'>
           <div className='nav-container'>
-            <OffcanvasNav />
+            <OffcanvasNav handleShowLogin={handleShow} handleShowRegister={handleShowRegister} />
             <Nav />
           </div>
           <div className='logo-container'>

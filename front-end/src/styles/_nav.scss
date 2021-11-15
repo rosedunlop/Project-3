@@ -44,8 +44,23 @@
   div {
     padding-top: 20px;
 
-    .offcanvas-auth li {
-      border-bottom: none;
+    .offcanvas-auth {
+      display: flex;
+      flex-direction: column;
+      button {
+        background-color: black;
+        border: black;
+      }
+      .button-one {
+        width: 70px;
+        position: relative;
+        right: 10px;
+      }
+      .button-two {
+        width: 200px;
+        position: relative;
+        right: 30px;
+      }
     }
 
     ul {
