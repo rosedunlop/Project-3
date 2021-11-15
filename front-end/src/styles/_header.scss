@@ -111,6 +111,20 @@ header {
       margin-top: 30px;
       border-radius: 30px;
     }
+
+    button:hover {
+      background-color: white;
+      color: black;
+      border: 3px solid black;
+    }
+
+    .register-para {
+      position: relative;
+      bottom: 20px;
+      p {
+        text-align: center;
+      }
+    }
   }
 
   .modal-footer {
