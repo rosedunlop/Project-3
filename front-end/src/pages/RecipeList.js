@@ -15,6 +15,10 @@ const RecipeList = () => {
 
     return (
         <>
+        <div className="heading">
+        <h1>Recipes</h1>
+        <p>Browse our favourite recipes...</p>
+        </div>
         {recipes.length &&
         <>
             <div className='recipeList'>

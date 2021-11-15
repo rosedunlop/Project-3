@@ -3,6 +3,54 @@
   margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+  .header-container {
+    .nav-container {
+      .header-nav {
+        display: none;
+      }
+    }
+  }
+  .login-container {
+    .auth-buttons-container {
+      display: none;
+    }
+    .search-container {
+      display: none;
+    }
+  }
+  header {
+    h1 {
+      position: relative;
+      right: 30px;
+    }
+  }
+  .modal {
+    .modal-body {
+      button {
+        position: relative;
+        right: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .modal {
+    .modal-title {
+      position: relative;
+      margin-top: 30px;
+      left: 70px;
+    }
+    .modal-body {
+      button {
+        position: relative;
+        left: 55px;
+      }
+    }
+  }
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -36,6 +84,7 @@ header {
     display: flex;
     align-items: center;
   }
+
   .logo-container {
     position: absolute;
     left: 46.5%;
@@ -100,20 +149,12 @@ header {
 .modal {
   font-family: $header;
 
-  .modal-title {
-    position: relative;
-    margin-top: 30px;
-    left: 70px;
-  }
-
   .modal-body {
     margin-top: 30px;
 
     button {
       background-color: black;
       border: black;
-      position: relative;
-      left: 55px;
       height: 50px;
       width: 350px;
       margin-top: 30px;

@@ -1,39 +1,80 @@
-.single-recipe {
-  h2 {
-    text-align: center;
-  }
-  .top-half {
+@media screen and (max-width: 600px) {
+  .single-recipe {
     display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #d8d8dd;
+    flex-direction: column;
+    .top-half {
+      display: flex;
+      flex-direction: column-reverse;
 
-    img {
-      width: 500px;
-      height: 500px;
-      object-fit: cover;
+      .info-div {
+        text-align: center;
+      }
+
+      img {
+        width: 90vw;
+        height: 350px;
+        object-fit: cover;
+        position: relative;
+        left: 15px;
+      }
+      padding-bottom: 20px;
+    }
+    .meth-ing {
+      .line-break {
+        white-space: pre-line;
+      }
+      #ingredients {
+        padding-left: 20px;
+      }
+      #method {
+        padding: 10px;
+        h3 {
+          padding-top: 20px;
+          padding-left: 20px;
+        }
+      }
     }
   }
-  .info-div {
-    width: 50%;
-  }
-  .meth-ing {
-    display: flex;
-    border-bottom: 2px solid #d8d8dd;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    .line-break {
-      white-space: pre-line;
+}
+
+@media screen and (min-width: 600px) {
+  .single-recipe {
+    h2 {
+      text-align: center;
     }
-    #ingredients {
-      width: 40%;
-      padding-left: 30px;
+    .top-half {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #d8d8dd;
+
+      img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+      }
     }
-    #method {
-      width: 60%;
-      padding-right: 30px;
-      padding-left: 30px;
-      border-left: 2px dotted #d8d8dd;
+    .info-div {
+      width: 50%;
+    }
+    .meth-ing {
+      display: flex;
+      border-bottom: 2px solid #d8d8dd;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      .line-break {
+        white-space: pre-line;
+      }
+      #ingredients {
+        width: 40%;
+        padding-left: 30px;
+      }
+      #method {
+        width: 60%;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-left: 2px dotted #d8d8dd;
+      }
     }
   }
 }

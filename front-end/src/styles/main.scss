@@ -1,13 +1,14 @@
-@import 'fonts';
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'header';
-@import 'nav';
-@import 'footer';
-@import 'about';
-@import 'home';
-@import 'recipeList';
-@import 'singleRecipe';
-@import 'account';
+@import "fonts";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "header";
+@import "nav";
+@import "footer";
+@import "about";
+@import "home";
+@import "recipeList";
+@import "singleRecipe";
+@import "account";
+@import "addRecipe";
 
 * {
   box-sizing: border-box;

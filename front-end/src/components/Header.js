@@ -35,7 +35,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
       <header>
         <div className='header-container'>
           <div className='nav-container'>
-            <OffcanvasNav />
+            <OffcanvasNav handleShowLogin={handleShow} handleShowRegister={handleShowRegister} />
             <Nav />
           </div>
           <div className='logo-container'>

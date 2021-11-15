@@ -6,6 +6,8 @@ import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
+//import AddRecipe from './pages/AddRecipe.js'
+import AddRecipeNew from './pages/AddRecipeNew.js'
 import { getToken } from './helpers/auth.js'
 import AddRecipe from './pages/AddRecipe.js'
 import SearchResults from './pages/SearchResults.js'
@@ -30,6 +32,7 @@ const App = () => {
       <main>
         <Switch>
           <Route path='/about' component={About} />
+          <Route path='/recipes/new' component={AddRecipeNew} />
           <Route path='/account' component={Account} />
           <Route path='/recipes/new' component={AddRecipe} />
           <Route path='/recipes/:id' component={RecipeShow} />
