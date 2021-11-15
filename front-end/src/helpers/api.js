@@ -6,7 +6,7 @@ import { getToken } from './auth'
 export const fetchRecipes = async () => {
     const config = {
         method: 'get', 
-        url: '/recipes',
+        url: '/api/recipes',
         headers: {}
     }
 

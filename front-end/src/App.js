@@ -7,6 +7,8 @@ import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
 import { getToken } from './helpers/auth.js'
+import AddRecipe from './pages/AddRecipe.js'
+import SearchResults from './pages/SearchResults.js'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -20,14 +22,17 @@ const App = () => {
   }, [])
 
   
+
   return (
     <Router>
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <main>
         <Switch>
           <Route path='/about' component={About} />
+          <Route path='/recipes/new' component={AddRecipe} />
           <Route path='/recipes/:id' component={RecipeShow} />
           <Route path='/recipes' component={RecipeList} />
+          <Route path='/search-results' component={SearchResults} />
           <Route exact path='/' component={Home} />
         </Switch>
       </main>

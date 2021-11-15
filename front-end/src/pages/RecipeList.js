@@ -1,24 +1,16 @@
 import RecipeHomeCard from '../components/RecipeHomeCard'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import axios from 'axios'
+
 import React from 'react'
+import { fetchRecipes } from '../helpers/api'
 
 
 const RecipeList = () => {
     const [recipes, setRecipes] = useState([])
 
     useEffect(() => {
-        async function fetchRecipes() {
-            const config = {
-                method: 'get',
-                url: '/api/recipes',
-                headers: {}
-            }
-            const response = await axios(config)
-            setRecipes(response.data)
-        }
-        fetchRecipes()
+        fetchRecipes().then(setRecipes)
     }, [])
 
     return (

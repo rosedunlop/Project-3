@@ -24,7 +24,7 @@ export default [
         keywords: ['italian', 'pasta', 'seafood'],
         time: 30,
         servings: 2,
-        tips: 'serve with lemon wedges',
+        tips: 'Serve with lemon wedges',
         difficulty: 'easy',
         author: 'Hannah Hill',
       },
@@ -42,6 +42,7 @@ export default [
         keywords: ['british', 'comfort food'],
         time: 130,
         servings: 8,
+        tips: 'Remember to salt the water',
         difficulty: 'medium',
         author: 'BBC Good Food',
       },
@@ -73,6 +74,7 @@ export default [
         keywords: ['asian', 'seafood'],
         time: 35,
         servings: 4,
+        tips: 'I prefer adding a few more sesame seeds',
         difficulty: 'easy',
         author: 'Rukmini Iyer',
       },
@@ -108,6 +110,7 @@ export default [
         keywords: ['italian', 'pasta'],
         time: 30,
         servings: 4,
+        tips: 'Take your time over the beginning steps to create a more flavoursome sauce',
         difficulty: 'medium',
         author: 'Thomas Straker',
       },
@@ -137,7 +140,7 @@ export default [
         keywords: ['pasta', 'comfort food'],
         time: 30,
         servings: 4,
-        tips: 'take your time on the onions',
+        tips: 'Take your time on the onions',
         difficulty: 'easy',
         author: 'Chelsie Collins',
       },
@@ -178,6 +181,8 @@ export default [
         keywords: ['mediterranean', 'lunch', 'veggie'],
         time: 85,
         servings: 4,
+        tips: 'Add some cheese into the wraps for added flavour',
+        difficulty: 'easy',
         author: 'Emma Freud',
       },
       {
@@ -208,6 +213,7 @@ export default [
         time: 50,
         servings: 4,
         tips: 'I prefer giving the sausage meat a bit longer to make it crispier',
+        difficulty: 'Medium',
         author: 'Esther Clark',
       },
       {
@@ -239,6 +245,7 @@ export default [
         time: 40,
         servings: 4,
         tips: 'take your time on your onions',
+        difficulty: 'Easy',
         author: 'Chelsie Collins',
       },
       {
@@ -276,6 +283,7 @@ export default [
         time: 30,
         servings: 4,
         tips: 'Use any leftover chicken stock to cook rice for some of the best rice you will ever eat!',
+        difficulty: 'Medium',
         author: 'MOB Kitchen',
       },
       {
@@ -308,6 +316,7 @@ export default [
         time: 20,
         servings: 4,
         tips: 'Using a hand whisk for making the hollandaise sauce gives better control over the final texture – you don’t want it to be whipped and become too thick to pour',
+        difficulty: 'Medium',
         author: 'Mary Berry',
       },
       {
@@ -341,8 +350,9 @@ export default [
         keywords: ['asian', 'quick', 'comfort food'],
         time: 30,
         servings: 2,
-        tips: 'keep the lid or tin foil cover on tight',
-        author: 'Chameh96',
+        tips: 'Keep the lid or tin foil cover on tight',
+        difficulty: 'Easy',
+        author: 'Ed Chamberlain',
       },
       {
         title: 'Beef Burgers with Beetroot and Carrot Slaw',
@@ -386,6 +396,7 @@ export default [
         time: 30,
         servings: 6,
         tips: 'Wear rubber gloves to stop the beetroot from staining your hands bright pink! And grate on to a plate rather than a chopping board, which is a less absorbent surface and easier to wash.',
+        difficulty: 'Medium',
         author: 'Mary Berry',
       },
       {
@@ -436,6 +447,7 @@ export default [
         time: 120,
         servings: 12,
         tips: 'For an extra-golden pie crust, egg wash for a second time halfway through cooking and rotate the pie',
+        difficulty: 'Medium',
         author: 'Jamie Oliver',
       },
       {
@@ -476,6 +488,8 @@ export default [
         keywords: ['asian', 'curry'],
         time: 50,
         servings: 6,
+        tips: 'You can prepare a lot of this and freeze it, it will keep for at least a month',
+        difficulty: 'Medium',
         author: 'Jamie Oliver',
       },
       {
@@ -514,6 +528,7 @@ export default [
             keywords: ['Prawns', 'Spicy'],
             time: 45,
             servings: 6,
+            tips: 'Get the pan up to temperature before putting in the dough',
             difficulty: 'Medium',
             author: 'Ainsley Harriott'
           }, 
@@ -527,6 +542,7 @@ export default [
              keywords: ['Chocolate', 'Cheesecake'],
              time: 60,
              servings: 12,
+             tips:'Make sure you seal the bottom of the tin with the parchement',
              difficulty: 'Medium',
              author: 'Ainsley Harriet'
             },
@@ -589,6 +605,8 @@ export default [
                       keywords: ['Vegetarian', 'Orzo', 'Feta'],
                       time: 30,
                       servings: 6,
+                      tips: 'Feel free to add more garlic toawrds the end of the cook for an extra garlic kick',
+                      difficulty: 'Easy', 
                       author: 'Half Baked Harvest'
                     }, 
                     {
@@ -600,6 +618,7 @@ export default [
                       keywords: ['Halloumi', 'Vegetarian', 'Honey'],
                       time: 35,
                       servings: 8,
+                      tips: 'Dry the halloumi before adding them to the eggs',
                       difficulty: 'Easy',
                       author: 'Half Baked Harvest'
                     }
