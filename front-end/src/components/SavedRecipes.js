@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const SavedRecipes = ({ recipes }) => {
   return (
     <div>
-      {recipes.length ? (
+      {recipes ? (
         recipes.map((recipe) => (
           <div key={recipe._id} className='oneRecipe'>
             <RecipeHomeCard {...recipe} />

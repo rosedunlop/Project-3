@@ -63,6 +63,19 @@
       background-color: white;
       color: black;
     }
+    .clicked-button {
+      height: 40px;
+      background: white;
+      color: black;
+      width: 40px;
+      border-radius: 50%;
+      border: 3px solid black;
+      font-size: 21px;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+      right: 10px;
+    }
   }
   h4 {
     text-size-adjust: 1rem;
