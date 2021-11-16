@@ -8,7 +8,6 @@ import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
 import AddRecipeNew from './pages/AddRecipeNew.js'
 import { getToken } from './helpers/auth.js'
-import AddRecipe from './pages/AddRecipe.js'
 import SearchResults from './pages/SearchResults.js'
 import Account from './pages/Account.js'
 
@@ -33,7 +32,6 @@ const App = () => {
           <Route path='/about' element={<About/>} />
           <Route path='/recipes/new' element={<AddRecipeNew/>} />
           <Route path='/account' element={<Account/>} />
-          <Route path='/recipes/new' element={<AddRecipe/>} />
           <Route path='/recipes/:id' element={<RecipeShow/>} />
           <Route path='/recipes' element={<RecipeList/>}/>
           <Route path='/search-results' element={<SearchResults/>} />

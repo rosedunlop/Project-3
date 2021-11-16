@@ -36,7 +36,7 @@ const IngredientsForm = () => {
     <>
     <div className='ing-meth-form'>
       <label>Ingredients</label>
-      <form onSubmit={handleSubmit}>
+      <div onSubmit={handleSubmit}>
           <div className="form-row">
               {inputFields.map((inputField, index) => (
                   <Fragment key={`${inputField}~${index}`}>
@@ -82,7 +82,7 @@ const IngredientsForm = () => {
             <pre>
                 {JSON.stringify(inputFields, null, 2)}
             </pre> */}
-      </form>
+      </div>
       </div>
 
     </>
