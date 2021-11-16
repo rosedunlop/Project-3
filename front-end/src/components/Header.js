@@ -6,12 +6,12 @@ import ModalRegister from './ModalRegister.js'
 import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { useHistory, Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { removeToken } from '../helpers/auth.js'
 import Button from 'react-bootstrap/Button'
 
 const Header = ({ isLoggedIn, setIsLoggedIn }) => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const [showLogin, setShowLogin] = useState(false)
   const handleClose = () => setShowLogin(false)
@@ -27,7 +27,7 @@ const Header = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleLogout = () => {
     removeToken()
     setIsLoggedIn(false)
-    history.push('/')
+    navigate('/')
   }
 
   return (

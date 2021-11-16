@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.js'
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
 import RecipeShow from './pages/OneRecipe.js'
-//import AddRecipe from './pages/AddRecipe.js'
 import AddRecipeNew from './pages/AddRecipeNew.js'
 import { getToken } from './helpers/auth.js'
 import AddRecipe from './pages/AddRecipe.js'
@@ -27,22 +26,22 @@ const App = () => {
   
 
   return (
-    <Router>
+    <BrowserRouter>
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <main>
-        <Switch>
-          <Route path='/about' component={About} />
-          <Route path='/recipes/new' component={AddRecipeNew} />
-          <Route path='/account' component={Account} />
-          <Route path='/recipes/new' component={AddRecipe} />
-          <Route path='/recipes/:id' component={RecipeShow} />
-          <Route path='/recipes' component={RecipeList} />
-          <Route path='/search-results' component={SearchResults} />
-          <Route exact path='/' component={Home} />
-        </Switch>
+        <Routes>
+          <Route path='/about' element={<About/>} />
+          <Route path='/recipes/new' element={<AddRecipeNew/>} />
+          <Route path='/account' element={<Account/>} />
+          <Route path='/recipes/new' element={<AddRecipe/>} />
+          <Route path='/recipes/:id' element={<RecipeShow/>} />
+          <Route path='/recipes' element={<RecipeList/>}/>
+          <Route path='/search-results' element={<SearchResults/>} />
+          <Route exact path='/' element={<Home/>} />
+        </Routes>
       </main>
       <Footer />
-    </Router>
+    </BrowserRouter>
   )
 }
 

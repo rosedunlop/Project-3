@@ -1,6 +1,8 @@
 import React from 'react'
+import Comments from './Comments.js'
+import AddComment from './AddComment.js'
 
-const SingleRecipe = ({ title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author }) => {
+const SingleRecipe = ({ title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
   return (
     <>
     
@@ -39,6 +41,12 @@ const SingleRecipe = ({ title, image, description, method, ingredients, keywords
         
       </div>
       <p>{`Top tips: ${tips}`}</p>
+      <div>
+      </div>
+      <div>
+        <AddComment />
+        <Comments comments={comments} averageRating={averageRating} />
+      </div>
     </>
   )
 }

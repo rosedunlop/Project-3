@@ -54,10 +54,4 @@ recipeSchema.set('toJSON', { virtuals: true })
 //Creating a model instance
 export default mongoose.model('Recipe', recipeSchema)
 
-// Schema for recipe model:
-// Rating?
 
-// Relationships/virtual:
-// Comments
-// Owner
-// Rating?

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
-import { useHistory } from 'react-router'
+// import { useHistory } from 'react-router'
 import { getAxiosRequestConfig } from '../helpers/api'
 import MethodForm from '../components/AddRecipe/Method'
 import IngredientsForm from '../components/AddRecipe/Ingredients'
@@ -23,7 +23,7 @@ const AddRecipeNew = () => {
   })
   const [errorInfo, setErrorInfo] = useState({})
   const [isError, setIsError] = useState(false)
-  const history = useHistory()
+  // const history = useHistory()
 
   const handleError = (error) => {
     if (error.response) {
@@ -42,7 +42,7 @@ const AddRecipeNew = () => {
 
       console.log(response.data)
       setIsError(false)
-      history.push(`/recipes/${response.data._id}`)
+      // history.push(`/recipes/${response.data._id}`)
     } catch (err) { 
         console.log(err)
     }
