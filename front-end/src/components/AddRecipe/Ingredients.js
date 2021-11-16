@@ -36,7 +36,7 @@ const IngredientsForm = () => {
     <>
     <div className='ing-meth-form'>
       <label>Ingredients</label>
-      <div onSubmit={handleSubmit}>
+      {/* <div onSubmit={handleSubmit}> */}
           <div className="form-row">
               {inputFields.map((inputField, index) => (
                   <Fragment key={`${inputField}~${index}`}>
@@ -69,7 +69,7 @@ const IngredientsForm = () => {
                     </Fragment>
               ))}   
           </div>
-          <div className='submit-button'>
+          {/* <div className='submit-button'>
               <button   
                 className='btn btn-primary mr-2'
                 type="submit"
@@ -77,13 +77,13 @@ const IngredientsForm = () => {
                 >
                     Save
                 </button>
-          </div>
+          </div> */}
           {/* <br/>
             <pre>
                 {JSON.stringify(inputFields, null, 2)}
             </pre> */}
       </div>
-      </div>
+      {/* </div> */}
 
     </>
   )
