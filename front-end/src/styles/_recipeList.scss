@@ -1,3 +1,17 @@
+.heading {
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: $header;
+  }
+  p {
+    text-align: center;
+    font-family: $header;
+    font-size: 20px;
+    padding-top: 20px;
+  }
+}
+
 .recipeList {
   display: flex;
   flex-wrap: wrap;
@@ -8,36 +22,58 @@
   width: 300px;
   margin: 20px;
   margin-bottom: 10px;
-  background-color: black;
-  color: white;
+  color: black;
   border-radius: 5px;
   position: relative;
   top: 0;
-}
-.oneRecipe :hover {
-  top: -10px;
-}
-img {
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-  border-radius: 5px;
 
-  //unsure about which method of image sizing to go for (tomorrow Ed, take a look)
-}
-.flex-container {
-  display: flex;
-  justify-content: space-between;
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
 
-  button {
-    .button:hover {
+  img:hover {
+    top: -10px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+
+    .second-button {
+      height: 40px;
       background: black;
       color: white;
+      width: 40px;
+      border-radius: 50%;
+      border: 3px solid black;
+      font-size: 21px;
+      text-align: center;
+      font-weight: 600;
+      position: relative;
+      right: 10px;
+    }
+
+    .second-button:hover {
+      background-color: white;
+      color: black;
     }
   }
-}
-h4 {
-  text-size-adjust: 1rem;
-  height: 60px;
-  overflow: hidden;
+  h4 {
+    text-size-adjust: 1rem;
+    height: 60px;
+    overflow: hidden;
+    a {
+      color: black;
+    }
+  }
+  .para {
+    color: #999;
+    font-size: 18px;
+  }
 }
