@@ -2,10 +2,10 @@ import axios from 'axios'
 import { getToken } from './auth'
 
 //Saving recipe to account -> NOT WORKING YET
-export const saveRecipe = async () => {
+export const saveRecipe = async (id) => {
   const config = {
     method: 'post',
-    url: '/api/recipes/:id/likes',
+    url: `/api/recipes/${id}/likes`,
     headers: {
       Authorization: `Bearer ${getToken()}`
     }
