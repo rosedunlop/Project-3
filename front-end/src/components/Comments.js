@@ -14,51 +14,11 @@ const Comments = ({ comments }) => {
         <Toast.Header>
           <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
           <strong className="me-auto">
-            {comment.rating === 1 ? (
-                <div>
-                    <FaStar/>
-                </div>
-            ) : (
-               <></> 
-            )}
-            {comment.rating === 2 ? (
-                <div>
-                    <FaStar/>
-                    <FaStar/>
-                </div>
-            ) : (
-                <></>
-            )}
-            {comment.rating === 3 ? (
-                <div>
-                    <FaStar/>
-                    <FaStar/>
-                    <FaStar/>
-                </div>
-            ) : (
-                <></>
-            )}
-            {comment.rating === 4 ? (
-                <div>
-                  <FaStar/>
-                  <FaStar/>
-                  <FaStar/>
-                  <FaStar/>
-                </div>
-            ) : (
-                <></>
-            )}
-            {comment.rating === 5 ? (
-                <div>
-                  <FaStar/>
-                  <FaStar/>
-                  <FaStar/>
-                  <FaStar/>
-                  <FaStar/>
-                </div>
-            ) : (
-                <></>
-            )}
+            {[...Array(comment.rating)].map((star) => {
+                return (  
+                  <FaStar key={star}/>
+                )
+            })}  
           </strong>
           <small className="text-muted">{comment.createdAt.slice(0, 10)}</small>
         </Toast.Header>

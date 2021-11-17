@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Comments from './Comments.js'
 import AddComment from './AddComment.js'
+import { FaStar } from 'react-icons/fa'
 
-const SingleRecipe = ({ title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
+const SingleRecipe = ({ setRecipe, title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
   const [starRating, setStarRating] = useState(null)
   const [hover, setHover] = useState(null)
-  
+
   return (
     <>
     
@@ -14,7 +15,10 @@ const SingleRecipe = ({ title, image, description, method, ingredients, keywords
       <img src={image} alt=""/>
       <div className='info-div'>
         <h2>{title}</h2>
-        <p>{`Rating: ${averageRating}`}</p>
+        <div className='average-rating'>
+          <FaStar className='star'/>  
+          <p>{`${averageRating}`}</p>
+        </div>
         <p>{`Cook: ${time} minutes`}</p>
         <p>{`Number of servings: ${servings}`}</p>
         <p>{`Difficulty: ${difficulty}`}</p>
@@ -45,7 +49,7 @@ const SingleRecipe = ({ title, image, description, method, ingredients, keywords
       </div>
       <p>{`Top tips: ${tips}`}</p>
       <div className="comments-container">
-        <AddComment starRating={starRating} setStarRating={setStarRating} hover={hover} setHover={setHover} />
+        <AddComment setRecipe={setRecipe} starRating={starRating} setStarRating={setStarRating} hover={hover} setHover={setHover} />
         <Comments comments={comments} averageRating={averageRating} />
       </div>
     </>

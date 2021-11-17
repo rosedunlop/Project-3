@@ -6,17 +6,17 @@ import axios from 'axios'
 import { useParams } from 'react-router'
 import { getToken } from '../helpers/auth.js'
 import { FaStar } from 'react-icons/fa'
-import { useNavigate } from 'react-router'
 
-const AddComment = ({ starRating, setStarRating, hover, setHover }) => {
+
+const AddComment = ({ setRecipe, starRating, setStarRating, hover, setHover }) => {
      const { id } = useParams()
      const [text, setText] = useState('')
      const [rating, setRating] = useState('')
      const [isError, setIsError] = useState(false)
-     const navigate = useNavigate()
+    
      
 
-     const handleCommentSubmit = async (event) => {
+  const handleCommentSubmit = async (event) => {
        event.preventDefault()
        const data = {
         text,
@@ -35,16 +35,19 @@ const AddComment = ({ starRating, setStarRating, hover, setHover }) => {
       
       try {
 
-        const response = await axios(config)
-        navigate(`/recipes/${response.data._id}`)
-      
+        const { data } = await axios(config)
+        setRecipe(data)
+        setText('')
+        setRating('')
+        setStarRating(null)
+    
           
       } catch (err) {
           console.log(err)
           setIsError(true)       
       }
 
-     }
+  }
 
      const handleTextChange = (event) => {
          setText(event.target.value)

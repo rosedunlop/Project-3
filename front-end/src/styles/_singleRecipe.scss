@@ -130,6 +130,18 @@
     }
     .info-div {
       width: 50%;
+
+      .average-rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .star {
+          position: relative;
+          top: 20px;
+          color: #ffc107;
+        }
+      }
     }
     .meth-ing {
       display: flex;
