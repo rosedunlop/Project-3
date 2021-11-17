@@ -40,6 +40,18 @@ export const fetchUser = async () => {
   return response.data
 }
 
+export const deleteUser = async (id) => {
+  const config = {
+    method: 'delete',
+    url: `api/account/${id}`,
+    headers: {
+      Authorization: `Bearer ${getToken()}`
+    }
+  }
+  const response = await axios(config)
+  return response.data
+}
+
 //Getting all the recipes
 export const fetchRecipes = async () => {
   const config = {
