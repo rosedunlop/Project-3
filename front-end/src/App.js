@@ -5,6 +5,7 @@ import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import About from './pages/About.js'
 import RecipeList from './pages/RecipeList'
+import UpdateRecipe from './pages/UpdateRecipe'
 import RecipeShow from './pages/OneRecipe.js'
 import AddRecipeNew from './pages/AddRecipeNew.js'
 import { getToken } from './helpers/auth.js'
@@ -30,6 +31,7 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/recipes/new' element={<AddRecipeNew />} />
           <Route path='/account' element={<Account />} />
+          <Route path='/recipes/:id/edit' element={<UpdateRecipe />} />
           <Route path='/recipes/:id' element={<RecipeShow />} />
           <Route path='/recipes' element={<RecipeList />} />
           <Route path='/search-results' element={<SearchResults />} />

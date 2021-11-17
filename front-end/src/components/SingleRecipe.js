@@ -1,11 +1,40 @@
 import React, { useState } from 'react'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
 import Comments from './Comments.js'
 import AddComment from './AddComment.js'
 import { FaStar } from 'react-icons/fa'
+import { getToken } from '../helpers/auth.js'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const SingleRecipe = ({ setRecipe, title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
   const [starRating, setStarRating] = useState(null)
   const [hover, setHover] = useState(null)
+  const { id } = useParams()
+  const navigate = useNavigate()
+
+  const deleteRecipe = async (id) => {
+    const config = {
+      method: 'delete',
+      url: `/api/recipes/${id}`,
+      headers: {
+        Authorization: `Bearer ${getToken()}`
+      }
+    }
+    const response = await axios(config)
+    return response.data
+  }
+
+  const handleDeleteClick = () => {
+    deleteRecipe(id).then((data) => {
+      navigate('/recipes')
+      console.log(data)
+    }).catch((err) => {
+      console.error(err)
+      alert(err)
+    })
+  }
 
   return (
     <>
@@ -25,9 +54,15 @@ const SingleRecipe = ({ setRecipe, title, image, description, method, ingredient
         <p>{`Original author: ${author}`}</p>
         <p>{keywords}</p>
         <p>{`"${description}"`}</p>
+        <div>
+          <button className='delete-button' onClick={handleDeleteClick}>Delete Recipe</button>
+          <Link to={`/recipes/${id}/edit`}>
+          <button className='Update Recipe'>Update Recipe</button>
+          </Link>
+        </div>
       </div>
       
-      </div>
+    </div>
       
       <div className='meth-ing'> 
       <div className='line-break' id='ingredients'> 
