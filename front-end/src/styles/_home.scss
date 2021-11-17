@@ -95,7 +95,9 @@ span {
           color: white;
         }
       }
-
+    }
+  }
+}
 .loading-container {
   margin: 0 auto;
   text-align: center;
@@ -136,8 +138,8 @@ span {
 }
 
 .top-recipes {
-  .recipe-card {
-    .card {
+  .recipeCard {
+    .oneRecipe {
       img {
         object-fit: cover;
         position: relative;
@@ -171,13 +173,13 @@ span {
   .top-recipes {
     padding-top: 40px;
 
-    .recipe-card {
+    .recipeList {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       padding-left: 40px;
 
-      .card {
+      .oneRecipe {
         width: 80vw;
         border: none;
         padding-bottom: 5px;
@@ -196,7 +198,7 @@ span {
     margin-bottom: 150px;
     margin-top: 80px;
 
-    .recipe-card {
+    .recipeList {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -204,30 +206,30 @@ span {
       width: 100vw;
       padding: 20px;
 
-      .card {
+      .oneRecipe {
         width: 30vw;
         height: 360px;
         padding: 10px;
-        border: none;
-
         img {
           width: 335px;
           height: 265px;
         }
-      }
 
-      .flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 90%;
-        position: absolute;
-        bottom: 0px;
-      }
-      .para {
-        color: #999;
-        position: relative;
-        top: 10px;
+        .flex-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 90%;
+          border: 2px solid blue;
+          position: absolute;
+          bottom: -90px;
+          padding-bottom: 20px;
+        }
+        .para {
+          color: #999;
+          // position: relative;
+          // top: 10px;
+        }
       }
 
       .second-button {

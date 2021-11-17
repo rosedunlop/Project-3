@@ -110,43 +110,43 @@ const Home = () => {
         </Carousel.Item>
         </Carousel>
           <div className='top-recipes'>
-            <h4 className='heading-recipe'>This Weeks Top Recipes</h4>
-            <div className='recipe-card'>
+            <h2 className='heading-popular'>Popular Recipes</h2>
+            <div className='recipeList'>
               {filteredRecipes.map((recipe) => (
-                <div className='card' key={recipe._id}>
+                <div className='oneRecipe' key={recipe._id}>
                   <RecipeHomeCard {...recipe} />
                 </div>
               ))}
             </div>
           </div>
-     </>
-     
-  )}
-          
+     </>     
+  )
+}
+}
 
-  export default Home
-      {/* <>
-        <div className='main-recipe-container'>
-          <div className='description'>
-            <h1>
-              <Link to={`/recipes/${randomRecipe._id}`}>
-                {titleArr.slice(0, -2).join(' ')}
-                <br />
-                <span> {titleArr.slice(-2).join(' ')}</span>
-              </Link>
-            </h1>
-            <p>{randomRecipe.description}</p>
-          </div>
-          <div className='image'>
-            <img src={randomRecipe.image} alt='recipe-image' />
-          </div>
-        </div>
-        <h2 className='heading-popular'>Popular recipes</h2>
-        <div className='recipeList'>
-          {filteredRecipes.map((recipe) => (
-            <div className='oneRecipe' key={recipe._id}>
-              <RecipeHomeCard {...recipe} />
-            </div>
-          ))}
-        </div>
-      </> */}
+  {/* <>
+    <div className='main-recipe-container'>
+    <div className='description'>
+    <h1>
+    <Link to={`/recipes/${randomRecipe._id}`}>
+    {titleArr.slice(0, -2).join(' ')}
+    <br />
+    <span> {titleArr.slice(-2).join(' ')}</span>
+    </Link>
+    </h1>
+    <p>{randomRecipe.description}</p>
+    </div>
+    <div className='image'>
+    <img src={randomRecipe.image} alt='recipe-image' />
+    </div>
+    </div>
+    <h2 className='heading-popular'>Popular recipes</h2>
+    <div className='recipeList'>
+    {filteredRecipes.map((recipe) => (
+      <div className='oneRecipe' key={recipe._id}>
+      <RecipeHomeCard {...recipe} />
+      </div>
+      ))}
+      </div>
+    </> */}
+export default Home
