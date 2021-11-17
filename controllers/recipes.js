@@ -116,6 +116,23 @@ export const likeRecipe = async (req, res) => {
 }
 
 // UNLIKE RECIPE
+// export const unlikeRecipe = async (req, res) => {
+//   try {
+//     const { id } = req.params
+//     const recipe = await Recipe.findById(id)
+//     if (!recipe) throw new Error()
+//     const likeToRemove = recipe.likes.findOne({ owner: req.currentUser._id })
+//     if (!likeToRemove) throw new Error()
+//     if (!likeToRemove.owner.equals(req.currentUser._id)) throw new Error()
+//     await likeToRemove.remove()
+//     await recipe.save({ validateModifiedOnly: true })
+//     return res.sendStatus(204)
+//   } catch (err) {
+//     console.log(err)
+//     return res.status(404).json({ message: 'like not found' })
+//   }
+// }
+
 export const unlikeRecipe = async (req, res) => {
   try {
     const { id, likeId } = req.params

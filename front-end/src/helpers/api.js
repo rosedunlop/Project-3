@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { getToken } from './auth'
 
-//Saving recipe to account -> NOT WORKING YET
+//Saving recipe to account
 export const saveRecipe = async (id) => {
   const config = {
     method: 'post',
@@ -13,6 +13,20 @@ export const saveRecipe = async (id) => {
   const response = await axios(config)
   return response.data
 }
+
+//Remove from saved recipes
+export const unsaveRecipe = async (id, likeId) => {
+  const config = {
+    method: 'delete',
+    url: `/api/recipes/${id}/likes/${likeId}`,
+    headers: {
+      Authorization: `Bearer ${getToken()}`
+    }
+  }
+  const response = await axios(config)
+  return response.data
+}
+
 //Getting user details
 export const fetchUser = async () => {
   const config = {

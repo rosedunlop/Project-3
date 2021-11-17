@@ -14,7 +14,7 @@ import Account from './pages/Account.js'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  
+
   useEffect(() => {
     if (getToken()) {
       setIsLoggedIn(true)
@@ -23,21 +23,19 @@ const App = () => {
     }
   }, [])
 
-  
-
   return (
     <BrowserRouter>
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <main>
         <Routes>
-          <Route path='/about' element={<About/>} />
-          <Route path='/recipes/new' element={<AddRecipeNew/>} />
-          <Route path='/account' element={<Account/>} />
-          <Route path='/recipes/new' element={<AddRecipe/>} />
-          <Route path='/recipes/:id' element={<RecipeShow/>} />
-          <Route path='/recipes' element={<RecipeList/>}/>
-          <Route path='/search-results' element={<SearchResults/>} />
-          <Route exact path='/' element={<Home/>} />
+          <Route path='/about' element={<About />} />
+          <Route path='/recipes/new' element={<AddRecipeNew />} />
+          <Route path='/account' element={<Account />} />
+          <Route path='/recipes/new' element={<AddRecipe />} />
+          <Route path='/recipes/:id' element={<RecipeShow />} />
+          <Route path='/recipes' element={<RecipeList />} />
+          <Route path='/search-results' element={<SearchResults />} />
+          <Route exact path='/' element={<Home />} />
         </Routes>
       </main>
       <Footer />
