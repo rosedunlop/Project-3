@@ -3,7 +3,7 @@ import axios from 'axios'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-const IngredientsForm = () => {
+const IngredientsForm = ( handleFormChange ) => {
 
     const [inputFields, setInputFields] = useState([
         { ingredients: '' }
@@ -51,6 +51,7 @@ const IngredientsForm = () => {
                             name='ingredients'
                             value={inputField.ingredients}
                             onChange={event => handleInputChange(index, event)}
+                            
                             /> 
                         </div>
                         <div className="form-group col-sm-2">

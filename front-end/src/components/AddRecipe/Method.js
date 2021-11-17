@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-const MethodForm = () => {
+const MethodForm = (handleFormChange) => {
 
     const [inputFields, setInputFields] = useState([
         { method: '' }
@@ -21,6 +21,7 @@ const MethodForm = () => {
         }
         setInputFields(values)
     }
+
     const handleAddFields = () => {
         const values = [...inputFields]
         values.push({ method: '' })
@@ -41,6 +42,7 @@ const MethodForm = () => {
           <div className="form-row">
               {inputFields.map((inputField, index) => (
                   <Fragment key={`${inputField}~${index}`}>
+                      
                       <div className='form-group col-sm-6'>
                           <input
                             type='text'
@@ -49,6 +51,7 @@ const MethodForm = () => {
                             name='method'
                             value={inputField.method}
                             onChange={event => handleInputChange(index, event)}
+                            
                             /> 
                         </div>
                         <div className="form-group col-sm-2">
