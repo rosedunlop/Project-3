@@ -2,8 +2,6 @@ import axios from 'axios'
 import React, { useState } from 'react'
 // import { useHistory } from 'react-router'
 //import { getAxiosRequestConfig } from '../helpers/api'
-import MethodForm from '../components/AddRecipe/Method'
-import IngredientsForm from '../components/AddRecipe/Ingredients'
 import OtherForms from '../components/AddRecipe/OtherInputs'
 import { getToken } from '../helpers/auth'
 import { ImageUploadField } from '../components/AddRecipe/ImageUploadFields'
@@ -25,8 +23,17 @@ const AddRecipeNew = () => {
 
   const [isError, setIsError] = useState(false)
 
+  // const handleError = (error) => {
+  //   if (error.response) {
+  //     setErrorInfo(error.response.data)
+  //     setIsError(true)
+  //   }
+  // }
+
   const handleSubmit = async (event) => {
+    console.log('button pressed')
     event.preventDefault()
+    console.log('submitted data', data)
 
     const config = {
       method: 'post',
@@ -37,30 +44,33 @@ const AddRecipeNew = () => {
       },
       data
     }
+    console.log(data)
 
     try {
       const response = await axios(config)
       console.log(response.data)
       setIsError(false)
+      window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
       // history.push(`/recipes/${response.data._id}`)
     } catch (err) { 
         setIsError(true)
+        window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
     }
   }
 
-  const handleFormChange = (event) => {
-    const { name, value } = event.target
+  const handleFormChange = (name, value) => {
     setData({
       ...data,
       [name]: value
     })
+    console.log(data)
   }
 
-  const handleChange = event => {
-    console.log('event.target.checked', event.target.checked)
-    const value = event.target.type === 'radio' ? event.target.checked : event.target.value
-    setData({ ...data, [event.target.name]: value })
-  }
+  // const handleChange = event => {
+  //   console.log('event.target.checked', event.target.checked)
+  //   const value = event.target.type === 'radio' ? event.target.checked : event.target.value
+  //   setData({ ...data, [event.target.name]: value })
+  // }
 
   const handleImageUrl = url => {
     setData({ ...data, image: url })
@@ -79,8 +89,6 @@ const AddRecipeNew = () => {
               </div>
               <div className='bottom-div'>
                 <div className="bottom-form">
-                  <IngredientsForm handleFormChange={handleFormChange} value={data.ingredients}/>
-                  <MethodForm handleFormChange={handleFormChange} value={data.method}/>
                   {isError ? (
                   <div className='error'>
                   <p>Error. Please try again.</p>

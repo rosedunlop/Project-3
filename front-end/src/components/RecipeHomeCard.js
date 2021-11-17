@@ -1,41 +1,42 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { saveRecipe } from '../helpers/api'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const RecipeHomeCard = ({ image, title, time, id }) => {
-  // const { id } = useParams()
-  const [saved, setSave] = useState(false)
+const RecipeHomeCard = ({ image, title, time, id, keywords }) => {
+  const [saved, setSaved] = useState(false)
+  // const likeId = likes.owner._id
 
   const handleClick = (event) => {
     console.log('Clicked recipe -->', id)
     event.preventDefault()
     saveRecipe(id)
-    setSave(true)
+    setSaved(true)
   }
 
-  const handleUnsave = (event) => {
-    console.log('Unliked recipe --> ', id)
-    event.preventDefault()
-
-    setSave(false)
-  }
+  const keywordsStr = keywords.join(', ').toLowerCase()
+  const titleStr = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()
 
   return (
     <>
       <img src={image} alt='' />
       <h4 className='heading-four'>
-        <Link to={`/recipes/${id}`}>{title}</Link>
+        <Link to={`/recipes/${id}`}>{titleStr}</Link>
       </h4>
       <div className='flex-container'>
+        <p>{keywordsStr}</p>
         <p className='para'>{`Cook: ${time} minutes`}</p>
         {!saved ? (
           <button className='second-button' onClick={handleClick}>
             +
           </button>
         ) : (
-          <button className='clicked-button' onClick={handleUnsave}>
-            +
-          </button>
+          <>
+            <Link to='/account'>
+              <FontAwesomeIcon icon={faCheckCircle} className='tick-icon' />
+            </Link>
+          </>
         )}
       </div>
     </>

@@ -28,7 +28,10 @@ const Account = () => {
           />
         </Tab>
         <Tab eventKey='savedRecipes' title='Saved recipes'>
-          <SavedRecipes recipes={accountDetails.likedRecipes} />
+          <SavedRecipes
+            userId={accountDetails._id}
+            recipes={accountDetails.likedRecipes}
+          />
         </Tab>
         <Tab eventKey='myRecipes' title='My recipes'></Tab>
       </Tabs>

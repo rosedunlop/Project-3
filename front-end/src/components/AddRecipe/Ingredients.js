@@ -1,22 +1,25 @@
 import React, { useState, Fragment } from 'react'
+import axios from 'axios'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-const IngredientsForm = () => {
+const IngredientsForm = ( handleFormChange ) => {
 
     const [inputFields, setInputFields] = useState([
         { ingredients: '' }
     ])
 
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log('ingredients', inputFields)
-    }
+    // const handleSubmit = e => {
+    //     e.preventDefault()
+    //     console.log('ingredients', inputFields)
+    // }
 
-    const handleInputChange = (index, event) => {
+    const handleInputChange = async (index, event) => {
         const values = [...inputFields]
         if (event.target.name === 'ingredients') {
             values[index].ingredients = event.target.value
+            console.log(values)
+
         }
         setInputFields(values)
     }
@@ -48,6 +51,7 @@ const IngredientsForm = () => {
                             name='ingredients'
                             value={inputField.ingredients}
                             onChange={event => handleInputChange(index, event)}
+                            
                             /> 
                         </div>
                         <div className="form-group col-sm-2">

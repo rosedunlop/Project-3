@@ -4,7 +4,7 @@ const AccountDetails = ({ username, email }) => {
   return (
     <>
       <div className='accountDetails-container'>
-        <h2></h2>
+        <h2 className='account-header'>Your account details</h2>
         <div className='accountField'>
           <div className='accountField-header'>
             <div>
