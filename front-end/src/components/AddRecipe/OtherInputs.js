@@ -17,7 +17,6 @@ const OtherForms = ({ handleFormChange, handleChange  }) => {
   const handleTitleChange = (event) => {
     setTitle(event.target.value)
     console.log(title)
-    
   }
 
   const handleTimeChange = (event) => {
