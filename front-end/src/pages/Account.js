@@ -5,7 +5,7 @@ import AccountDetails from '../components/AccountDetails'
 import SavedRecipes from '../components/SavedRecipes'
 import { fetchUser } from '../helpers/api.js'
 
-const Account = () => {
+const Account = ({ setIsLoggedIn }) => {
   const [accountDetails, setAccountDetails] = useState([])
 
   useEffect(() => {
@@ -25,6 +25,8 @@ const Account = () => {
           <AccountDetails
             username={accountDetails.username}
             email={accountDetails.email}
+            userId={accountDetails._id}
+            setIsLoggedIn={setIsLoggedIn}
           />
         </Tab>
         <Tab eventKey='savedRecipes' title='Saved recipes'>

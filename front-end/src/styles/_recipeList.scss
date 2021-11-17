@@ -12,6 +12,17 @@
   }
 }
 
+.toast-alert {
+  margin-bottom: 30px;
+  font-family: $content;
+  .toast-head {
+    font-size: 18px;
+  }
+  .toast-bod {
+    font-size: 15px;
+  }
+}
+
 .recipeList {
   width: 90vw;
   margin: 0 auto;

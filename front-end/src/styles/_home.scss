@@ -4,7 +4,100 @@
 span {
   font-weight: 900;
 }
+.carousel {
+  height: 60vh;
+  width: 100%;
+  background-color: black;
+  .carousel-indicators {
+    margin-left: 800px;
+  }
 
+  .carousel-control-prev-icon {
+    position: relative;
+    right: 50px;
+  }
+  .carousel-control-next-icon {
+    position: relative;
+    left: 50px;
+  }
+  .item {
+    width: 100vw;
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      height: 60vh;
+
+      .img {
+        width: 50vw;
+        border-left: 2px solid white;
+
+        .first-image {
+          width: 40vw;
+          height: 40vh;
+          object-fit: cover;
+          position: relative;
+          left: 50px;
+          top: 60px;
+        }
+      }
+
+      .caption {
+        width: 50vw;
+        padding-top: 50px;
+        color: white;
+        font-family: $content;
+        h1 {
+          font-size: 60px;
+          width: 34vw;
+          font-size: 60px;
+          text-align: left;
+          font-weight: 100;
+        }
+        p {
+          width: 40vw;
+          font-size: 22px;
+          font-weight: 100;
+        }
+        .link {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: $header;
+            position: relative;
+            left: 400px;
+            padding-bottom: 15px;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+        button {
+          height: 40px;
+          background: white;
+          color: black;
+          width: 40px;
+          border-radius: 50%;
+          border: 3px solid white;
+          font-size: 21px;
+          text-align: center;
+          font-weight: 600;
+          position: relative;
+          left: 435px;
+        }
+        .button:hover {
+          background: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
 .loading-container {
   margin: 0 auto;
   text-align: center;
@@ -13,42 +106,6 @@ span {
 
   h2 {
     margin-top: 30px;
-  }
-}
-
-.main-recipe-container {
-  font-family: $content;
-  .description {
-    h1 a {
-      text-decoration: none;
-      color: white;
-    }
-    h1 a:hover {
-      text-decoration: underline;
-    }
-
-    .button {
-      height: 40px;
-      background: white;
-      color: black;
-      width: 40px;
-      border-radius: 50%;
-      border: 3px solid white;
-      font-size: 21px;
-      text-align: center;
-      font-weight: 600;
-    }
-    .button:hover {
-      background: black;
-      color: white;
-    }
-  }
-  .image {
-    img {
-      object-fit: cover;
-      height: 400px;
-      border-radius: 3px;
-    }
   }
 }
 
@@ -81,8 +138,8 @@ span {
 }
 
 .top-recipes {
-  .recipe-card {
-    .card {
+  .recipeCard {
+    .oneRecipe {
       img {
         object-fit: cover;
         position: relative;
@@ -113,63 +170,69 @@ span {
 }
 
 @media screen and (max-width: 600px) {
-  .main-recipe-container {
-    display: flex;
-    flex-direction: column;
+  .carousel {
     width: 100vw;
-    height: 40%;
-  }
-  .description {
-    width: 100vw;
-    padding-top: 20px;
-    border-bottom: 2px solid white;
-    background-color: black;
-    color: white;
+    height: 60vh;
 
-    h1 {
-      width: 350px;
-      text-align: center;
-      padding-left: 20px;
-    }
-    p {
-      width: 350px;
-      padding-left: 20px;
-    }
-    .button {
-      position: relative;
-      left: 300px;
-      bottom: 20px;
+    .item {
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        .img {
+          width: 100vw;
+          height: 300px;
+          margin-bottom: 30px;
+          padding-left: 20px;
+          border: none;
+
+          .first-image {
+            width: 70vw;
+            height: 200px;
+            object-fit: cover;
+            position: absolute;
+            top: 250px;
+            right: -40px;
+          }
+        }
+        .caption {
+          width: 100vw;
+          height: 300px;
+          h1 {
+            width: 50vw;
+            position: relative;
+            top: 30px;
+            left: 40px;
+            height: 100px;
+            font-size: 30px;
+          }
+          p {
+            display: none;
+          }
+          .link {
+            display: none;
+          }
+        }
+      }
     }
   }
-  .image {
-    width: 100vw;
-    padding-left: 35px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: black;
-
-    img {
-      width: 90%;
-    }
-  }
-
   .top-recipes {
     padding-top: 40px;
 
-    .recipe-card {
+    .recipeList {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      padding-left: 40px;
+      // padding-left: 40px;
 
-      .card {
+      .oneRecipe {
         width: 80vw;
         border: none;
         padding-bottom: 5px;
-
-        img {
-          width: 100%;
-          height: 80%;
+        .description-container {
+          img {
+            width: 100%;
+            height: 200px;
+          }
         }
       }
     }
@@ -177,54 +240,11 @@ span {
 }
 
 @media screen and (min-width: 600px) {
-  .main-recipe-container {
-    display: flex;
-    width: 100vw;
-    height: 500px;
-    background-color: black;
-
-    .description {
-      width: 50%;
-      color: white;
-      border-right: 2px solid white;
-      padding-top: 60px;
-      padding-bottom: 60px;
-      padding-left: 30px;
-
-      h1 {
-        width: 34vw;
-        font-size: 60px;
-        text-align: left;
-        font-weight: 100;
-      }
-
-      p {
-        width: 40vw;
-        font-size: 22px;
-        font-weight: 100;
-      }
-    }
-  }
-
-  .image {
-    width: 50%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 30px;
-    img {
-      width: 45vw;
-    }
-  }
-  .button {
-    position: relative;
-    left: 500px;
-  }
-
   .top-recipes {
     margin-bottom: 150px;
     margin-top: 80px;
 
-    .recipe-card {
+    .recipeList {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
@@ -232,30 +252,27 @@ span {
       width: 100vw;
       padding: 20px;
 
-      .card {
+      .oneRecipe {
         width: 30vw;
         height: 360px;
         padding: 10px;
-        border: none;
+        margin-top: 50px;
+        .description-container {
+          img {
+            width: 335px;
+            height: 265px;
+          }
 
-        img {
-          width: 335px;
-          height: 265px;
+          .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+          }
+          .para {
+            color: #999;
+          }
         }
-      }
-
-      .flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 90%;
-        position: absolute;
-        bottom: 0px;
-      }
-      .para {
-        color: #999;
-        position: relative;
-        top: 10px;
       }
 
       .second-button {

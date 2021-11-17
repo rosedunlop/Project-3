@@ -30,8 +30,8 @@ const App = () => {
         <Routes>
           <Route path='/about' element={<About />} />
           <Route path='/recipes/new' element={<AddRecipeNew />} />
-          <Route path='/account' element={<Account />} />
           <Route path='/recipes/:id/edit' element={<UpdateRecipe />} />
+          <Route path='/account' element={<Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}/>
           <Route path='/recipes/:id' element={<RecipeShow />} />
           <Route path='/recipes' element={<RecipeList />} />
           <Route path='/search-results' element={<SearchResults />} />
