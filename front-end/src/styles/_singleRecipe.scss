@@ -35,6 +35,80 @@
       }
     }
   }
+  .comments-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #d8d8dd;
+  }
+
+  .comment-form {
+    width: 100vw;
+    padding: 20px;
+    border-right: 2px solid #d8d8dd;
+
+    h4 {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .star-form {
+      padding-bottom: 20px;
+      .rating-para {
+        font-family: $header;
+        font-size: 15px;
+        position: relative;
+        right: 280px;
+      }
+      input {
+        display: none;
+      }
+    }
+    Form {
+      .form-floating {
+        padding-bottom: 10px;
+        .comment {
+          height: 200px;
+        }
+      }
+      .comment-error {
+        p {
+          color: red;
+          font-family: $header;
+          font-size: 15px;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .toast-comment {
+    width: 100vw;
+    padding-top: 20px;
+
+    h4 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .me-auto {
+      svg {
+        color: #ffc107;
+      }
+    }
+
+    .toast-container {
+      padding-left: 70px;
+      padding-bottom: 20px;
+      width: 80vw;
+      .toast-main {
+        height: 100px;
+      }
+      .toast-header {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -56,6 +130,18 @@
     }
     .info-div {
       width: 50%;
+
+      .average-rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .star {
+          position: relative;
+          top: 20px;
+          color: #ffc107;
+        }
+      }
     }
     .meth-ing {
       display: flex;
@@ -74,6 +160,77 @@
         padding-right: 30px;
         padding-left: 30px;
         border-left: 2px dotted #d8d8dd;
+      }
+    }
+  }
+  .comments-container {
+    display: flex;
+    border-top: 2px solid #d8d8dd;
+  }
+
+  .comment-form {
+    width: 50vw;
+    padding: 20px;
+    border-right: 2px solid #d8d8dd;
+
+    h4 {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .star-form {
+      padding-bottom: 20px;
+      .rating-para {
+        font-family: $header;
+        font-size: 15px;
+        position: relative;
+        right: 280px;
+      }
+      input {
+        display: none;
+      }
+    }
+    Form {
+      .form-floating {
+        padding-bottom: 10px;
+        .comment {
+          height: 200px;
+        }
+      }
+      .comment-error {
+        p {
+          color: red;
+          font-family: $header;
+          font-size: 15px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .toast-comment {
+    width: 50vw;
+    padding-top: 20px;
+
+    h4 {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .me-auto {
+      svg {
+        color: #ffc107;
+      }
+    }
+
+    .toast-container {
+      padding-left: 70px;
+      padding-bottom: 20px;
+      .toast-main {
+        width: 500px;
+      }
+      .toast-header {
+        button {
+          display: none;
+        }
       }
     }
   }

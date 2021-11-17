@@ -8,7 +8,6 @@ const RecipeShow = () => {
     const [recipe, setRecipe] = useState(null)
     const { id } = useParams()
     console.log('End of the world')
-    // const history = useHistory()
 
     useEffect(() => {
         fetchRecipe(id).then(setRecipe)
@@ -19,7 +18,7 @@ const RecipeShow = () => {
         {recipe && (
             <section>
                 <div className='single-recipe'>
-                    <SingleRecipe {...recipe} />
+                    <SingleRecipe {...recipe} setRecipe={setRecipe} />
                  </div>
             </section>
         )}

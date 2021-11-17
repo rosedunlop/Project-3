@@ -8,15 +8,16 @@ const MethodForm = () => {
         { method: '' }
     ])
 
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log('method', inputFields)
-    }
+    // const handleSubmit = e => {
+    //     e.preventDefault()
+    //     console.log('method', inputFields)
+    // }
 
     const handleInputChange = (index, event) => {
         const values = [...inputFields]
         if (event.target.name === 'method') {
             values[index].method = event.target.value
+            console.log(values)
         }
         setInputFields(values)
     }
@@ -36,7 +37,7 @@ const MethodForm = () => {
     <>
     <div className='ing-meth-form'>
       <label>Method</label>
-      <form onSubmit={handleSubmit}>
+      {/* <div onSubmit={handleSubmit}> */}
           <div className="form-row">
               {inputFields.map((inputField, index) => (
                   <Fragment key={`${inputField}~${index}`}>
@@ -69,7 +70,7 @@ const MethodForm = () => {
                     </Fragment>
               ))}   
           </div>
-          <div className='submit-button'>
+          {/* <div className='submit-button'>
               <button   
                 className='btn btn-primary mr-2'
                 type="submit"
@@ -77,13 +78,13 @@ const MethodForm = () => {
                 >
                     Save
                 </button>
-          </div>
+          </div> */}
           {/* <br/>
             <pre>
                 {JSON.stringify(inputFields, null, 2)}
             </pre> */}
-      </form>
       </div>
+      {/* </div> */}
 
     </>
   )

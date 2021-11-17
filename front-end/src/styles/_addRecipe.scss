@@ -31,8 +31,13 @@
   align-items: center;
   justify-content: center;
 }
-.ing-meth-form {
+.img-meth-form {
   width: 40%;
+}
+.img-preview img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
 }
 .other-forms {
   display: flex;
