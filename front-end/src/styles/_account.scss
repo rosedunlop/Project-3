@@ -1,5 +1,8 @@
-.account-container {
-  width: 100%;
+.accountDetails-container {
+  width: 40%;
+  margin: 0 auto;
+
+
 }
 .nav-tabs {
   justify-content: center;
@@ -28,4 +31,13 @@
 .account-header {
   text-align: center;
   font-family: $logo;
+}
+
+.buttons-account {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 20px;
+  }
 }
