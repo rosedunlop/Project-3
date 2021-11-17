@@ -4,9 +4,29 @@
 span {
   font-weight: 900;
 }
+
+.loading-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+  margin-top: 100px;
+
+  h2 {
+    margin-top: 30px;
+  }
+}
+
 .main-recipe-container {
   font-family: $content;
   .description {
+    h1 a {
+      text-decoration: none;
+      color: white;
+    }
+    h1 a:hover {
+      text-decoration: underline;
+    }
+
     .button {
       height: 40px;
       background: white;
@@ -26,18 +46,21 @@ span {
   .image {
     img {
       object-fit: cover;
+      height: 400px;
+      border-radius: 3px;
     }
   }
 }
 
+.heading-popular {
+  text-align: center;
+  font-weight: 500;
+  font-size: 35px;
+  font-family: $logo;
+  margin: 50px auto;
+}
 .top-recipes {
   font-family: $header;
-
-  .heading-recipe {
-    text-align: center;
-    font-weight: 500;
-    font-size: 25px;
-  }
 
   .second-button {
     height: 40px;
@@ -81,6 +104,11 @@ span {
   a {
     text-decoration: none;
     color: black;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 

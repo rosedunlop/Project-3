@@ -19,7 +19,8 @@ const SearchResults = () => {
     }
     return recipes.filter((recipe) => {
       const recipeTitle = recipe.title.toLowerCase()
-      return recipeTitle.includes(query)
+      const recipeKeywords = recipe.keywords.join(' ').toLowerCase()
+      return recipeTitle.includes(query) || recipeKeywords.includes(query)
     })
   }
 
@@ -27,8 +28,10 @@ const SearchResults = () => {
     <>
       {recipes.length && (
         <>
+          <h2 className='account-header'>
+            Search results for &quot;{query}&quot;
+          </h2>
           <div className='recipeList'>
-            <h2>Search results for {query}</h2>
             {filteredRecipes.length ? (
               filteredRecipes.map((recipe) => (
                 <div key={recipe._id} className='oneRecipe'>

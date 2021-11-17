@@ -1,8 +1,8 @@
 .heading {
-  h1 {
+  h2 {
     text-align: center;
     padding-top: 20px;
-    font-family: $header;
+    font-family: $logo;
   }
   p {
     text-align: center;
@@ -13,14 +13,16 @@
 }
 
 .recipeList {
+  width: 90vw;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .oneRecipe {
   height: 420px;
-  width: 300px;
-  margin: 20px;
+  width: 350px;
+  margin: 10px;
   margin-bottom: 10px;
   color: black;
   border-radius: 5px;
@@ -29,7 +31,7 @@
 
   img {
     height: 300px;
-    width: 300px;
+    width: 100%;
     object-fit: cover;
     border-radius: 5px;
     position: relative;
@@ -77,6 +79,7 @@
       right: 10px;
     }
   }
+
   h4 {
     text-size-adjust: 1rem;
     height: 60px;
@@ -89,4 +92,16 @@
     color: #999;
     font-size: 18px;
   }
+
+  .tick-icon {
+    font-size: 32px;
+    color: black;
+  }
+}
+.trash-icon {
+  font-size: 26px;
+}
+.trash-icon:hover {
+  font-size: 30px;
+  cursor: pointer;
 }
