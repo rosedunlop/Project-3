@@ -12,7 +12,7 @@ export const ImageUploadField = ({ handleImageUrl, value }) => {
         data.append('upload_preset', uploadPreset)
         console.log('data', data)
         const res = await axios.post(uploadUrl, data)
-        console.log('response --> ', res)
+        console.log('response --> ', res.data.url)
         handleImageUrl(res.data.url)
     
     }

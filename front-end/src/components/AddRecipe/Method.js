@@ -17,6 +17,7 @@ const MethodForm = () => {
         const values = [...inputFields]
         if (event.target.name === 'method') {
             values[index].method = event.target.value
+            console.log(values)
         }
         setInputFields(values)
     }

@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react'
+import axios from 'axios'
 
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -8,15 +9,17 @@ const IngredientsForm = () => {
         { ingredients: '' }
     ])
 
-    const handleSubmit = e => {
-        e.preventDefault()
-        console.log('ingredients', inputFields)
-    }
+    // const handleSubmit = e => {
+    //     e.preventDefault()
+    //     console.log('ingredients', inputFields)
+    // }
 
-    const handleInputChange = (index, event) => {
+    const handleInputChange = async (index, event) => {
         const values = [...inputFields]
         if (event.target.name === 'ingredients') {
             values[index].ingredients = event.target.value
+            console.log(values)
+
         }
         setInputFields(values)
     }

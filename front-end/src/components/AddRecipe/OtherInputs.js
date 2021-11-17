@@ -3,7 +3,8 @@ import { Form } from 'react-bootstrap'
 
 
 
-const OtherForms = ({ handleFormChange, handleChange }) => {
+
+const OtherForms = ({ handleFormChange, handleChange  }) => {
   const [title, setTitle] = useState('')
   const [time, setTime] = useState('')
   const [servings, setServings] = useState('')
@@ -16,11 +17,12 @@ const OtherForms = ({ handleFormChange, handleChange }) => {
   const handleTitleChange = (event) => {
     setTitle(event.target.value)
     console.log(title)
+    
   }
 
   const handleTimeChange = (event) => {
     setTime(event.target.value)
-    console.log(title)
+    console.log(time)
   }
 
   const handleServingsChange = (event) => {
@@ -64,17 +66,17 @@ const OtherForms = ({ handleFormChange, handleChange }) => {
 
               <Form.Group className="mb-3" controlId="recipeTime">
                 <Form.Label>Time to cook (in minutes) </Form.Label>
-                <Form.Control type="number" placeholder="e.g. 40" value={time} onChange={handleTimeChange} />
+                <Form.Control type="number" placeholder="40" value={time} onChange={handleTimeChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="recipeServings">
                 <Form.Label>Number of servings </Form.Label>
-                <Form.Control type="number" placeholder="e.g. 3" value={servings} onChange={handleServingsChange} />
+                <Form.Control type="number" placeholder="3" value={servings} onChange={handleServingsChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="recipeKeywords">
                 <Form.Label>Keywords</Form.Label>
-                <Form.Control type="string" placeholder="e.g. One-pot, Indian, Quick" value={keywords} onChange={handleKeywordsChange} />
+                <Form.Control type="string" placeholder="One-pot, Indian, Quick" value={keywords} onChange={handleKeywordsChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="recipeTips">
