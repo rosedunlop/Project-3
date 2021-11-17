@@ -2,8 +2,6 @@ import axios from 'axios'
 import React, { useState } from 'react'
 // import { useHistory } from 'react-router'
 //import { getAxiosRequestConfig } from '../helpers/api'
-import MethodForm from '../components/AddRecipe/Method'
-import IngredientsForm from '../components/AddRecipe/Ingredients'
 import OtherForms from '../components/AddRecipe/OtherInputs'
 import { getToken } from '../helpers/auth'
 import { ImageUploadField } from '../components/AddRecipe/ImageUploadFields'
@@ -23,16 +21,14 @@ const AddRecipeNew = () => {
       author: ''
   })
 
-  const [errorInfo, setErrorInfo] = useState({})
   const [isError, setIsError] = useState(false)
-  //const history = useHistory()
 
-  const handleError = (error) => {
-    if (error.response) {
-      setErrorInfo(error.response.data)
-      setIsError(true)
-    }
-  }
+  // const handleError = (error) => {
+  //   if (error.response) {
+  //     setErrorInfo(error.response.data)
+  //     setIsError(true)
+  //   }
+  // }
 
   const handleSubmit = async (event) => {
     console.log('button pressed')
@@ -51,7 +47,7 @@ const AddRecipeNew = () => {
     console.log(data)
 
     try {
-      const response = await axios(config).catch(handleError)
+      const response = await axios(config)
       console.log(response.data)
       setIsError(false)
       window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
@@ -62,8 +58,7 @@ const AddRecipeNew = () => {
     }
   }
 
-  const handleFormChange = (event) => {
-    const { name, value } = event.target
+  const handleFormChange = (name, value) => {
     setData({
       ...data,
       [name]: value
@@ -80,9 +75,6 @@ const AddRecipeNew = () => {
   const handleImageUrl = url => {
     setData({ ...data, image: url })
   }
-  const handleTitle = title => {
-    setData({ ...data, title: title })
-  }
 
   //const formInputProps = { data, handleFormChange }
 
@@ -97,8 +89,6 @@ const AddRecipeNew = () => {
               </div>
               <div className='bottom-div'>
                 <div className="bottom-form">
-                  <IngredientsForm handleFormChange={handleFormChange} value={data.ingredients} name='ingredients' />
-                  <MethodForm handleFormChange={handleFormChange} value={data.method} name='method' />
                   {isError ? (
                   <div className='error'>
                   <p>Error. Please try again.</p>
