@@ -1,6 +1,6 @@
 @import 'fonts';
-@import 'colours';
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'colours';
 @import 'header';
 @import 'nav';
 @import 'footer';
@@ -17,7 +17,9 @@
 }
 body {
   padding-bottom: 100px;
+  background-color: $body;
 }
 main {
   background-color: $body;
+  height: 100%;
 }

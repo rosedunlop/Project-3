@@ -70,14 +70,15 @@ const Home = () => {
                 />
               </div>
               <div className='caption'>
-                <h1>
-                  <Link to={`/recipes/${randomRecipes[0]._id}`}>
-                    {randomRecipes[0].title.slice(0, -2).join(' ')}
-                    <br />
-                    <span> {randomRecipes[0].title.slice(-2).join(' ')}</span>
-                  </Link>
-                </h1>
-                <p>{randomRecipes[0].description}</p>
+                <div className='caption-text'>
+                  <h1>
+                    <Link to={`/recipes/${randomRecipes[0]._id}`}>
+                      {randomRecipes[0].title.slice(0, -2).join(' ')}
+                      <span> {randomRecipes[0].title.slice(-2).join(' ')}</span>
+                    </Link>
+                  </h1>
+                  <p>{randomRecipes[0].description}</p>
+                </div>
                 <div className='link'>
                   <Link to={`/recipes/${randomRecipes[0]._id}`}>
                     View recipe
@@ -97,14 +98,15 @@ const Home = () => {
                 />
               </div>
               <div className='caption'>
-                <h1>
-                  <Link to={`/recipes/${randomRecipes[1]._id}`}>
-                    {randomRecipes[1].title.slice(0, -2).join(' ')}
-                    <br />
-                    <span> {randomRecipes[1].title.slice(-2).join(' ')}</span>
-                  </Link>
-                </h1>
-                <p>{randomRecipes[1].description}</p>
+                <div className='caption-text'>
+                  <h1>
+                    <Link to={`/recipes/${randomRecipes[1]._id}`}>
+                      {randomRecipes[1].title.slice(0, -2).join(' ')}
+                      <span> {randomRecipes[1].title.slice(-2).join(' ')}</span>
+                    </Link>
+                  </h1>
+                  <p>{randomRecipes[1].description}</p>
+                </div>
                 <div className='link'>
                   <Link to={`/recipes/${randomRecipes[1]._id}`}>
                     View recipe
@@ -124,14 +126,15 @@ const Home = () => {
                 />
               </div>
               <div className='caption'>
-                <h1>
-                  <Link to={`/recipes/${randomRecipes[0]._id}`}>
-                    {randomRecipes[2].title.slice(0, -2).join(' ')}
-                    <br />
-                    <span> {randomRecipes[2].title.slice(-2).join(' ')}</span>
-                  </Link>
-                </h1>
-                <p>{randomRecipes[2].description}</p>
+                <div className='caption-text'>
+                  <h1>
+                    <Link to={`/recipes/${randomRecipes[0]._id}`}>
+                      {randomRecipes[2].title.slice(0, -2).join(' ')}
+                      <span> {randomRecipes[2].title.slice(-2).join(' ')}</span>
+                    </Link>
+                  </h1>
+                  <p>{randomRecipes[2].description}</p>
+                </div>
                 <div className='link'>
                   <Link to={`/recipes/${randomRecipes[2]._id}`}>
                     View recipe

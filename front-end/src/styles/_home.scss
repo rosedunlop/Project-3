@@ -7,6 +7,9 @@ main {
 span {
   font-weight: 900;
 }
+h1 {
+  letter-spacing: -2;
+}
 h1 a {
   color: $main-text;
   text-decoration: none;
@@ -24,14 +27,18 @@ h1 a:hover {
     margin-left: 800px;
   }
 
-  .carousel-control-prev-icon {
-    position: relative;
-    right: 50px;
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
   }
-  .carousel-control-next-icon {
-    position: relative;
-    left: 50px;
-  }
+
+  // .carousel-control-prev-icon {
+
+  // }
+  // .carousel-control-next-icon {
+  //   position: relative;
+  //   left: 50px;
+  // }
   .item {
     width: 100vw;
     .container {
@@ -42,11 +49,10 @@ h1 a:hover {
 
       .img {
         width: 50vw;
-        border-left: 2px solid white;
-        border-radius: 5px;
+        border-left: 2px solid $main-text;
 
         .first-image {
-          width: 40vw;
+          width: 85%;
           height: 40vh;
           object-fit: cover;
           position: relative;
@@ -61,31 +67,43 @@ h1 a:hover {
         padding-top: 50px;
         color: $main-text;
         font-family: $content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        .caption-text {
+          height: 270px;
+          width: 90%;
+        }
         h1 {
           font-size: 60px;
-          width: 34vw;
+          width: 100%;
           font-size: 60px;
           text-align: left;
-          font-weight: 100;
+          font-weight: 300;
+          letter-spacing: -1px;
+          line-height: 1;
         }
         p {
-          width: 40vw;
+          width: 90%;
           font-size: 22px;
           font-weight: 100;
+          text-align: justify;
         }
         .link {
           display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
+          flex-direction: row;
+          justify-content: flex-start;
+          width: 90%;
+          align-items: center;
+          margin-top: 50px;
           a {
             color: $main-text;
             text-decoration: none;
             font-size: 20px;
             font-weight: 300;
             font-family: $header;
-            position: relative;
-            left: 400px;
-            padding-bottom: 15px;
           }
           a:hover {
             text-decoration: underline;
@@ -101,8 +119,7 @@ h1 a:hover {
           font-size: 21px;
           text-align: center;
           font-weight: 600;
-          position: relative;
-          left: 435px;
+          margin-left: 30px;
         }
         .button:hover {
           background: $main-text;
@@ -128,7 +145,7 @@ h1 a:hover {
   font-weight: 500;
   font-size: 35px;
   font-family: $logo;
-  margin: 50px auto;
+  margin-top: 20px;
   color: $background;
 }
 .top-recipes {

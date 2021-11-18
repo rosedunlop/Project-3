@@ -33,12 +33,12 @@
 }
 
 .offcanvas-header {
-  background-color: black;
+  background-color: $background;
 }
 
 .offcanvas-body {
-  background-color: black;
-  color: white;
+  background-color: $background;
+  color: $main-text;
   padding: 50px;
 
   div {
@@ -50,7 +50,7 @@
       width: 200px;
 
       .auth-button {
-        color: white;
+        color: $main-text;
         border: none;
         position: relative;
         right: 58px;
@@ -59,14 +59,14 @@
         text-decoration: underline;
       }
       .auth-button-account {
-        color: white;
+        color: $main-text;
         border: none;
       }
       .auth-button-account:hover {
         text-decoration: underline;
       }
       .button-one {
-        color: white;
+        color: $main-text;
         border: none;
         position: relative;
         right: 68px;
@@ -75,7 +75,7 @@
         text-decoration: underline;
       }
       .button-two {
-        color: white;
+        color: $main-text;
         border: none;
         position: relative;
         right: 20px;
@@ -84,8 +84,8 @@
         text-decoration: underline;
       }
       button {
-        background-color: black;
-        border: black;
+        background-color: $background;
+        border: $background;
       }
     }
     ul {
@@ -95,11 +95,11 @@
       padding: 10px;
 
       li {
-        border-bottom: 2px solid white;
+        border-bottom: 2px solid $main-text;
 
         a {
           text-decoration: none;
-          color: white;
+          color: $main-text;
         }
         a:hover {
           text-decoration: underline;

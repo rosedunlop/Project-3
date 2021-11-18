@@ -23,6 +23,32 @@
   }
 }
 
+form.search-allrecipes {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .searchInput {
+    background-color: inherit;
+    border: none;
+    border-bottom: 2px solid $background;
+    color: $background;
+    width: 280px;
+    padding-right: 20px;
+  }
+  .searchInput:focus {
+    outline: none;
+  }
+  .arrow-icon {
+    border-bottom: 2px solid $background;
+    font-size: 22px;
+    padding-bottom: 5px;
+  }
+}
+
 .recipeList {
   width: 90vw;
   margin: 0 auto;
@@ -31,11 +57,11 @@
   justify-content: space-around;
 }
 .oneRecipe {
-  height: 420px;
+  height: 400px;
   width: 350px;
   margin: 10px;
   margin-bottom: 10px;
-  color: black;
+  color: body;
   border-radius: 5px;
   position: relative;
   top: 0;
@@ -96,12 +122,12 @@
     height: 60px;
     overflow: hidden;
     a {
-      color: black;
+      color: $background;
     }
   }
   .para {
-    color: #999;
-    font-size: 18px;
+    color: $background;
+    font-size: 16px;
   }
 
   .tick-icon {
