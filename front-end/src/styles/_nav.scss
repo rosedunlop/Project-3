@@ -47,22 +47,47 @@
     .offcanvas-auth {
       display: flex;
       flex-direction: column;
+      width: 200px;
+
+      .auth-button {
+        color: white;
+        border: none;
+        position: relative;
+        right: 58px;
+      }
+      .auth-button:hover {
+        text-decoration: underline;
+      }
+      .auth-button-account {
+        color: white;
+        border: none;
+      }
+      .auth-button-account:hover {
+        text-decoration: underline;
+      }
+      .button-one {
+        color: white;
+        border: none;
+        position: relative;
+        right: 68px;
+      }
+      .button-one:hover {
+        text-decoration: underline;
+      }
+      .button-two {
+        color: white;
+        border: none;
+        position: relative;
+        right: 20px;
+      }
+      .button-two:hover {
+        text-decoration: underline;
+      }
       button {
         background-color: black;
         border: black;
       }
-      .button-one {
-        width: 70px;
-        position: relative;
-        right: 10px;
-      }
-      .button-two {
-        width: 200px;
-        position: relative;
-        right: 30px;
-      }
     }
-
     ul {
       list-style: none;
       line-height: 2.5;

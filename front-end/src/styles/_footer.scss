@@ -27,14 +27,26 @@ footer {
   .footer-nav {
     height: 100%;
     width: 50%;
+    padding-top: 40px;
 
     ul {
-      color: white;
       list-style: none;
       display: flex;
-
-      li {
-        padding: 10px;
+      justify-content: space-between;
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      button {
+        background-color: black;
+        border: none;
+        color: white;
+      }
+      button:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -42,6 +54,22 @@ footer {
   .footer-footer {
     color: white;
     font-family: $header;
+    font-size: 11px;
     width: 50%;
+    padding-top: 20px;
+    position: relative;
+    left: 200px;
+    p {
+      padding-top: 12px;
+    }
+    .social {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      padding: 5px;
+      position: relative;
+      left: 100px;
+      top: 5px;
+    }
   }
 }
