@@ -89,7 +89,7 @@ const UpdateRecipe = () => {
         <>
         <section>
             <h3>Edit This Recipe</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='total-form'>
                 <div className='top-div'>
                     <EditRecipeForms formInputProps={formInputProps}/>
                     <ImageUploadField name='image' handleImageUrl={handleImageUrl}/>

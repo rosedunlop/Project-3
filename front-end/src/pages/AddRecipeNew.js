@@ -79,7 +79,7 @@ const AddRecipeNew = () => {
     return (
         <section>
             <h1>Add your own recipe</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='total-form'>
               <div className='top-div'>
                 <OtherForms handleFormChange={handleFormChange}/>
                 <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
@@ -95,7 +95,7 @@ const AddRecipeNew = () => {
                   )}
                 </div>
               </div>
-              <div>
+              <div className='add-button'>
                 <input type='submit' value='Add Recipe' />
               </div>
           </form>
