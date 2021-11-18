@@ -23,7 +23,7 @@ const MyRecipes = (recipes) => {
         <div className='myRecipes-container'>
           <h3>You haven&apos;t created any recipes yet.</h3>
           <Link to='/recipes/new'>
-            <h4>Add one here.</h4>
+            <p>Add one here.</p>
           </Link>
         </div>
       </>

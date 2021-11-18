@@ -15,8 +15,10 @@ const SavedRecipes = ({ userId, recipes }) => {
           ))
         ) : (
           <>
-            <h3>You have not saved any recipes yet!</h3>
-            <Link to='/recipes'>Browse all recipes here.</Link>
+            <div className='savedRecipes-container'>
+              <h3>You haven&apos;t saved any recipes yet.</h3>
+              <Link to='/recipes'>Browse all recipes here.</Link>
+            </div>
           </>
         )}
       </div>

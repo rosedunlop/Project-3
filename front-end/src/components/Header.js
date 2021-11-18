@@ -6,12 +6,22 @@ import ModalRegister from './ModalRegister.js'
 import ModalLogin from './ModalLogin.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import {  Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import SearchTop from './SearchTop.js'
 
-
-
-const Header = ({ handleLogout, isLoggedIn, setIsLoggedIn, handleShow, handleClose, setShowLogin, showLogin, handleShowRegister, handleCloseRegister, showRegister, setShowRegister }) => {
-
+const Header = ({
+  handleLogout,
+  isLoggedIn,
+  setIsLoggedIn,
+  handleShow,
+  handleClose,
+  setShowLogin,
+  showLogin,
+  handleShowRegister,
+  handleCloseRegister,
+  showRegister,
+  setShowRegister
+}) => {
   const [showSearchBar, setShowSearchBar] = useState(false)
   const handleClick = () => setShowSearchBar(true)
 
@@ -90,3 +100,5 @@ const Header = ({ handleLogout, isLoggedIn, setIsLoggedIn, handleShow, handleClo
 }
 
 export default Header
+
+//<SearchTop key='top' placement='top' name='top' />

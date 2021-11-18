@@ -55,12 +55,18 @@
   }
 }
 
-.myRecipes-container {
+.myRecipes-container,
+.savedRecipes-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   width: 50%;
   margin: 20px auto;
 
   a {
-    color: black;
+    color: $background;
+  }
+  a.hover {
+    color: $main-text;
   }
 }

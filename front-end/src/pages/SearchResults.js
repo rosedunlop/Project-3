@@ -39,10 +39,12 @@ const SearchResults = () => {
                 </div>
               ))
             ) : (
-              <h3>
-                Sorry, no results for your search {query}. <br />
-                <Link to='/recipes'>Browse all recipes here.</Link>{' '}
-              </h3>
+              <div className='no-results'>
+                <h3>Sorry, none of our recipes matched your search.</h3>
+                <p>
+                  <Link to='/recipes'>Browse all recipes here.</Link>{' '}
+                </p>
+              </div>
             )}
           </div>
         </>

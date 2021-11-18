@@ -1,15 +1,15 @@
-@import "fonts";
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "colours";
-@import "header";
-@import "nav";
-@import "footer";
-@import "about";
-@import "home";
-@import "recipeList";
-@import "singleRecipe";
-@import "account";
-@import "addRecipe";
+@import 'fonts';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'colours';
+@import 'header';
+@import 'nav';
+@import 'footer';
+@import 'about';
+@import 'home';
+@import 'recipeList';
+@import 'singleRecipe';
+@import 'account';
+@import 'addRecipe';
 
 * {
   box-sizing: border-box;
