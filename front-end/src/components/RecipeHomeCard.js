@@ -27,17 +27,21 @@ const RecipeHomeCard = ({ image, title, time, id, keywords }) => {
         <SaveToast showToast={showToast} setShowToast={setShowToast} />
       </div>
       <div className='description-container'>
-        <img src={image} alt='' />
+        <Link to={`/recipes/${id}`}>
+          <img src={image} alt='' />
+        </Link>
         <h4 className='heading-four'>
           <Link to={`/recipes/${id}`}>{titleStr}</Link>
         </h4>
         <div className='flex-container'>
           <p>{keywordsStr}</p>
-          <p className='para'>{`cook: ${time} mins`}</p>
+          <p className='para'>{`Cook: ${time} mins`}</p>
           {!saved ? (
-            <button className='second-button' onClick={handleClick}>
-              +
-            </button>
+            <>
+              <button className='second-button' onClick={handleClick}>
+                +
+              </button>
+            </>
           ) : (
             <>
               <Link to='/account'>
