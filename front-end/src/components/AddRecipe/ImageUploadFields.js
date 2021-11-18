@@ -26,7 +26,7 @@ export const ImageUploadField = ({ handleImageUrl, value }) => {
             :
             <> 
             <div className='image-input'>
-            <label>Add a photo of your recipe</label>
+            <label>Add a photo of your recipe:  </label>
             <input
                 className='input'
                 type='file'

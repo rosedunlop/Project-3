@@ -159,8 +159,6 @@ const OtherForms = ({ handleFormChange }) => {
                 <Form.Label>Original Author</Form.Label>
                 <Form.Control type="string" placeholder="e.g. Gordon Ramsey" name='author' value={author} onChange={handleAuthorChange} />
               </Form.Group>
-
-              
             </div>
 
       </div>

@@ -102,36 +102,10 @@ const EditRecipeForms = ({ handleFormChange, formInputProps  }) => {
 
               <Form.Group className="mb-3" controlId="recipeTips">
                 <Form.Label>Top Tips</Form.Label>
-                <Form.Control as="textarea" rows={3} name='tips' value={data.tips} onChange={handleTipsChange}/>
-              </Form.Group>
-            </div> 
-
-            <div className='right-forms'>
-
-              <Form.Group className="mb-3" controlId="recipeDescription">
-                <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" rows={3} name='description' value={data.description} onChange={handleDescriptionChange} />
+                <Form.Control as="textarea" rows={1} name='tips' value={data.tips} onChange={handleTipsChange}/>
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="recipeDescription">
-                <Form.Label>Method</Form.Label>
-                <Form.Control as="textarea" rows={3} name='method' value={data.method} onChange={handleMethodChange} />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="recipeDescription">
-                <Form.Label>Ingredients</Form.Label>
-                <Form.Control as="textarea" rows={3} name='ingredients' value={data.ingredients} onChange={handleIngredientsChange} />
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="recipeAuthor">
-                <Form.Label>Original Author</Form.Label>
-                <Form.Control type="string" placeholder="e.g. Gordon Ramsey" name='author' value={data.author} onChange={handleAuthorChange} />
-              </Form.Group>
-            </div>
-
-      </div>
-    
-      <div className='difficulty'>
+              <div className='difficulty'>
             <Form.Label>Difficulty</Form.Label>
             {['radio'].map((type) => (
                 <div key={`inline-${type}`} className="mb-3">
@@ -165,6 +139,34 @@ const EditRecipeForms = ({ handleFormChange, formInputProps  }) => {
                 </div>
             ))}
         </div>
+            </div> 
+
+            <div className='right-forms'>
+
+              <Form.Group className="mb-3" controlId="recipeDescription">
+                <Form.Label>Description</Form.Label>
+                <Form.Control as="textarea" rows={3} name='description' value={data.description} onChange={handleDescriptionChange} />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="recipeMethod">
+                <Form.Label>Method</Form.Label>
+                <Form.Control as="textarea" rows={3} name='method' value={data.method} onChange={handleMethodChange} />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="recipeIngredients">
+                <Form.Label>Ingredients</Form.Label>
+                <Form.Control as="textarea" rows={3} name='ingredients' value={data.ingredients} onChange={handleIngredientsChange} />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="recipeAuthor">
+                <Form.Label>Original Author</Form.Label>
+                <Form.Control type="string" placeholder="e.g. Gordon Ramsey" name='author' value={data.author} onChange={handleAuthorChange} />
+              </Form.Group>
+            </div>
+
+      </div>
+    
+      
         </div>
     )
 }

@@ -92,18 +92,20 @@ const UpdateRecipe = () => {
             <form onSubmit={handleSubmit} className='total-form'>
                 <div className='top-div'>
                     <EditRecipeForms formInputProps={formInputProps}/>
-                    <ImageUploadField name='image' handleImageUrl={handleImageUrl}/>
+                    
                 </div>
                 <div className='bottom-div'>
                     <div className="bottom-form">
-                    
+                        <ImageUploadField name='image' handleImageUrl={handleImageUrl}/>
                     </div>
                 </div>
+                <div className='add-button'>
                 <div>
-                    <input type='submit' value='Save Updates'/>
+                    <input type='submit' className ='click' value='Save Updates'/>
                 </div>
                 <div>
-                    <input type='button' onClick={goBack} value='Cancel'/>
+                    <input type='button' onClick={goBack} className ='click' value='Cancel'/>
+                </div>
                 </div>
             </form>
         </section>

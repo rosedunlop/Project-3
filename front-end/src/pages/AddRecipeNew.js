@@ -78,14 +78,15 @@ const AddRecipeNew = () => {
 
     return (
         <section>
-            <h1>Add your own recipe</h1>
+            <h3>Add your own recipe</h3>
             <form onSubmit={handleSubmit} className='total-form'>
               <div className='top-div'>
                 <OtherForms handleFormChange={handleFormChange}/>
-                <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
+                
               </div>
               <div className='bottom-div'>
                 <div className="bottom-form">
+                  <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
                   {isError ? (
                   <div className='error'>
                   <p>Error. Please try again.</p>
@@ -96,7 +97,7 @@ const AddRecipeNew = () => {
                 </div>
               </div>
               <div className='add-button'>
-                <input type='submit' value='Add Recipe' />
+                <input className ='click' type='submit' value='Add Recipe' />
               </div>
           </form>
         </section>
