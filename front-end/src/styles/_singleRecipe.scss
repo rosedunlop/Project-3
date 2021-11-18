@@ -158,11 +158,15 @@
       justify-content: center;
       padding-bottom: 20px;
       border-bottom: 2px solid $main-text;
-
-      img {
-        width: 500px;
-        height: 500px;
-        object-fit: cover;
+      .image-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+          width: 500px;
+          height: 500px;
+          object-fit: cover;
+        }
       }
       .info-div {
         width: 50%;
@@ -188,6 +192,11 @@
             }
           }
         }
+        .keywords {
+          position: relative;
+          top: 30px;
+          text-align: center;
+        }
         .description-div {
           position: relative;
           left: 90px;
@@ -196,6 +205,7 @@
           height: 20vh;
           p {
             font-size: 16px;
+            text-align: center;
           }
         }
 
@@ -242,7 +252,7 @@
 
           .star {
             position: relative;
-            top: 13px;
+            margin: 5px;
             color: #ffc107;
           }
         }
@@ -268,6 +278,11 @@
       }
     }
   }
+
+  .tips-para {
+    text-align: center;
+  }
+
   .comments-container {
     display: flex;
     border-top: 2px solid $main-text;
@@ -355,11 +370,4 @@
       }
     }
   }
-}
-
-.delete-button {
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  border-color: black;
 }
