@@ -1,4 +1,4 @@
-section {
+.working-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,8 +7,9 @@ section {
   color: #ffab4c;
   font-family: $content;
 }
-h3 {
+.form-head {
   padding-top: 5px;
+  align-self: center;
 }
 .total-form {
   width: 100%;

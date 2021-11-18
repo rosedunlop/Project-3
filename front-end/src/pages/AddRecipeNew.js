@@ -77,8 +77,8 @@ const AddRecipeNew = () => {
 
 
     return (
-        <section>
-            <h3>Add your own recipe</h3>
+        <section className='working-page'>
+            <h3 className='form-head'>Add your own recipe</h3>
             <form onSubmit={handleSubmit} className='total-form'>
               <div className='top-div'>
                 <OtherForms handleFormChange={handleFormChange}/>
@@ -97,7 +97,7 @@ const AddRecipeNew = () => {
                 </div>
               </div>
               <div className='add-button'>
-                <input className ='click' type='submit' value='Add Recipe' />
+                <input  type='submit' className ='click' value='Add Recipe' />
               </div>
           </form>
         </section>
