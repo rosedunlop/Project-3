@@ -39,6 +39,7 @@ const RecipeList = () => {
 
     return (
       <>
+      <section className='all-recipes'>
         <div className='heading'>
           <h2>Recipes</h2>
           <p>Browse our favourite recipes...</p>
@@ -66,6 +67,7 @@ const RecipeList = () => {
             </div>
           </>
         )}
+        </section>
       </>
     )
   }

@@ -87,8 +87,8 @@ const UpdateRecipe = () => {
 
     return (
         <>
-        <section>
-            <h3>Edit This Recipe</h3>
+        <section className='working-page'>
+            <h3 className='form-head'>Edit This Recipe</h3>
             <form onSubmit={handleSubmit} className='total-form'>
                 <div className='top-div'>
                     <EditRecipeForms formInputProps={formInputProps}/>

@@ -99,7 +99,7 @@ const OtherForms = ({ handleFormChange }) => {
 
               <Form.Group className="mb-3" controlId="recipeTips">
                 <Form.Label>Top Tips</Form.Label>
-                <Form.Control as="textarea" rows={1} name='tips' value={tips} onChange={handleTipsChange}/>
+                <Form.Control as="textarea" rows={1} name='tips' placeholder="Any tips that can help" value={tips} onChange={handleTipsChange}/>
               </Form.Group>
 
               <div className='difficulty'>
@@ -142,7 +142,7 @@ const OtherForms = ({ handleFormChange }) => {
 
               <Form.Group className="mb-3" controlId="recipeDescription">
                 <Form.Label>Description</Form.Label>
-                <Form.Control as="textarea" rows={3} name='description' value={description} onChange={handleDescriptionChange} />
+                <Form.Control as="textarea" rows={3} name='description' placeholder="A short summary of the recipe" value={description} onChange={handleDescriptionChange} />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="recipeMethod">
