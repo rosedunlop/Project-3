@@ -2,6 +2,8 @@ import RecipeHomeCard from '../components/RecipeHomeCard'
 import { Spinner } from 'react-bootstrap'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 import React from 'react'
 import { fetchRecipes } from '../helpers/api'
@@ -28,11 +30,30 @@ const RecipeList = () => {
       </>
     )
   } else if (!isLoading) {
+    // recipes.forEach((recipe) => {
+    //   recipe.title =
+    //     recipe.title.charAt(0).toUpperCase() +
+    //     recipe.title.slice(1).toLowerCase()
+    //   recipe.keywords = recipe.keywords.join(', ').toLowerCase()
+    // })
+
     return (
       <>
         <div className='heading'>
           <h2>Recipes</h2>
           <p>Browse our favourite recipes...</p>
+          <form className='search-allrecipes'>
+            <input
+              type='text'
+              className='searchInput'
+              placeholder='search recipes...'
+            ></input>
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className='arrow-icon'
+              type='submit'
+            />
+          </form>
         </div>
         {recipes.length && (
           <>

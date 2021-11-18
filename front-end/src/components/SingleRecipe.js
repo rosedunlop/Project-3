@@ -8,7 +8,7 @@ import { getToken } from '../helpers/auth.js'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-const SingleRecipe = ({ setRecipe, title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
+const SingleRecipe = ({ isLoggedIn, setRecipe, title, image, description, method, ingredients, keywords, time, servings, tips, difficulty, author, comments, averageRating }) => {
   const [starRating, setStarRating] = useState(null)
   const [hover, setHover] = useState(null)
   const { id } = useParams()
@@ -36,35 +36,49 @@ const SingleRecipe = ({ setRecipe, title, image, description, method, ingredient
     })
   }
 
+  const splitKeywords = keywords.toString().replace(',', ' ').replace(',' ,' ')
+
   return (
     <>
     
     <div className='top-half'>
-      
+      <div className='image-div'>
       <img src={image} alt=""/>
+        <p>{splitKeywords}</p>
+      </div>
       <div className='info-div'>
         <h2>{title}</h2>
         <div className='average-rating'>
           <FaStar className='star'/>  
           <p>{`${averageRating}`}</p>
         </div>
-        <p>{`Cook: ${time} minutes`}</p>
-        <p>{`Number of servings: ${servings}`}</p>
-        <p>{`Difficulty: ${difficulty}`}</p>
-        <p>{`Original author: ${author}`}</p>
-        <p>{keywords}</p>
-        <p>{`"${description}"`}</p>
-        <div>
+        <div className='info-contain'>
+        <div className="first-div">
+          <p className='one'>{`Cook: ${time} minutes`}</p>
+          <p className='one'>{`Number of servings: ${servings}`}</p>
+        </div>
+        <div className="second-div">
+          <p className='two'>{`Difficulty: ${difficulty}`}</p>
+          <p className='two'>{`Original author: ${author}`}</p>   
+        </div>  
+        </div>
+        <div className="description-div">
+          <p>{`"${description}"`}</p>
+        </div>
+        {isLoggedIn ? (
+        <div className="add-delete-buttons">
           <button className='delete-button' onClick={handleDeleteClick}>Delete Recipe</button>
           <Link to={`/recipes/${id}/edit`}>
-          <button className='Update Recipe'>Update Recipe</button>
+          <button className='update-button'>Update Recipe</button>
           </Link>
         </div>
-      </div>
-      
-    </div>
-      
-      <div className='meth-ing'> 
+
+        ) : (
+          <></>
+        )}
+      </div>   
+    </div>  
+    <div className='meth-ing'> 
       <div className='line-break' id='ingredients'> 
       <h3> Ingredients </h3>
           {ingredients.map(str => {

@@ -1,24 +1,31 @@
 main {
-  section {
+  section.about {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    background-color: $body;
+    border: none;
+    height: 85vh;
+
     .about-text {
       display: flex;
       flex-direction: column;
       align-items: center;
-      align-self: center;
     }
     h2 {
       font-family: $logo;
+      color: $background;
       font-size: 2rem;
       margin: 10px;
     }
     p {
       font-family: $content;
-      font-size: 1.5rem;
+      color: $background;
+      font-size: 20px;
       text-align: center;
       margin: 10px;
+      width: 60%;
     }
   }
 }
@@ -28,10 +35,21 @@ main {
 .squad-photos {
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 30px;
   .photos {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .squad-photos {
     flex-direction: column;
   }
 }

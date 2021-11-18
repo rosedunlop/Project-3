@@ -4,7 +4,7 @@ import SingleRecipe from '../components/SingleRecipe'
 import { useParams } from 'react-router'
 import { fetchRecipe } from '../helpers/api'
 
-const RecipeShow = () => {
+const RecipeShow = ({ isLoggedIn }) => {
     const [recipe, setRecipe] = useState(null)
     const { id } = useParams()
     console.log('End of the world')
@@ -18,7 +18,7 @@ const RecipeShow = () => {
         {recipe && (
             <section>
                 <div className='single-recipe'>
-                    <SingleRecipe {...recipe} setRecipe={setRecipe} />
+                    <SingleRecipe {...recipe} setRecipe={setRecipe} isLoggedIn={isLoggedIn} />
                  </div>
             </section>
         )}

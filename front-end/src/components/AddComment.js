@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import { FloatingLabel } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button'
 import axios from 'axios'
 import { useParams } from 'react-router'
 import { getToken } from '../helpers/auth.js'
@@ -82,7 +81,7 @@ const AddComment = ({ setRecipe, starRating, setStarRating, hover, setHover }) =
               )         
           })}
         </div>
-        <FloatingLabel controlId="floatingTextarea2" label="Comment">
+        <FloatingLabel className="label-comment" controlId="floatingTextarea2" label="Comment">
            <Form.Control
              className='comment'
              as="textarea"
@@ -98,7 +97,7 @@ const AddComment = ({ setRecipe, starRating, setStarRating, hover, setHover }) =
         ) : (
             <></>
         )}
-        <Button type='submit'>Post</Button>
+        <button className="post=button" type='submit'>Post</button>
         </Form>
       </div>
     )

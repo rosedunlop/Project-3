@@ -15,7 +15,7 @@ footer {
   height: 100px;
   padding-left: 48px;
   padding-right: 48px;
-  background-color: black;
+  background-color: $background;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -35,15 +35,15 @@ footer {
       justify-content: space-between;
       .link {
         text-decoration: none;
-        color: white;
+        color: $main-text;
       }
       .link:hover {
         text-decoration: underline;
       }
       button {
-        background-color: black;
+        background-color: $background;
         border: none;
-        color: white;
+        color: $main-text;
       }
       button:hover {
         text-decoration: underline;
@@ -52,7 +52,7 @@ footer {
   }
 
   .footer-footer {
-    color: white;
+    color: $main-text;
     font-family: $header;
     font-size: 11px;
     width: 50%;
