@@ -1,3 +1,15 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #142f43;
+  border: solid 2px #ffab4c;
+  color: #ffab4c;
+  font-family: $content;
+}
+.total-form {
+  width: 100%;
+}
 .form-row {
   width: 100%;
   display: flex;
@@ -49,10 +61,11 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .top-forms {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
@@ -62,4 +75,10 @@
 }
 .right-forms {
   width: 40%;
+}
+.add-button {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
