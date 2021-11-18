@@ -36,15 +36,14 @@ const SingleRecipe = ({ isLoggedIn, setRecipe, title, image, description, method
     })
   }
 
-  const splitKeywords = keywords.toString().replace(',', ' ').replace(',' ,' ')
-
+  const splitKeywords = keywords.slice(' ').toString()
+  console.log(splitKeywords)
   return (
     <>
     
     <div className='top-half'>
       <div className='image-div'>
       <img src={image} alt=""/>
-        <p>{splitKeywords}</p>
       </div>
       <div className='info-div'>
         <h2>{title}</h2>
@@ -61,6 +60,9 @@ const SingleRecipe = ({ isLoggedIn, setRecipe, title, image, description, method
           <p className='two'>{`Difficulty: ${difficulty}`}</p>
           <p className='two'>{`Original author: ${author}`}</p>   
         </div>  
+        </div>
+        <div className="keywords">
+          <p>{`Keywords: ${splitKeywords}`}</p>
         </div>
         <div className="description-div">
           <p>{`"${description}"`}</p>
@@ -96,7 +98,7 @@ const SingleRecipe = ({ isLoggedIn, setRecipe, title, image, description, method
           })}
         </div>
       </div>
-      <p>{`Top tips: ${tips}`}</p>
+      <p className='tips-para'>{`Top tips: ${tips}`}</p>
       <div className="comments-container">
         <AddComment setRecipe={setRecipe} starRating={starRating} setStarRating={setStarRating} hover={hover} setHover={setHover} />
         <Comments comments={comments} averageRating={averageRating} />
