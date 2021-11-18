@@ -93,11 +93,11 @@ h1 a:hover {
         }
         button {
           height: 40px;
-          background: white;
-          color: $main-text;
+          background: $main-text;
+          color: $background;
           width: 40px;
           border-radius: 50%;
-          border: 3px solid white;
+          border: 3px solid $main-text;
           font-size: 21px;
           text-align: center;
           font-weight: 600;
@@ -105,8 +105,8 @@ h1 a:hover {
           left: 435px;
         }
         .button:hover {
-          background: $main-text;
-          color: white;
+          background: $background;
+          color: $main-text;
         }
       }
     }

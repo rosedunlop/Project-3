@@ -48,7 +48,7 @@ const App = () => {
           <Route path='/recipes/new' element={<AddRecipeNew />} />
           <Route path='/recipes/:id/edit' element={<UpdateRecipe />} />
           <Route path='/account' element={<Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />}/>
-          <Route path='/recipes/:id' element={<RecipeShow />} />
+          <Route path='/recipes/:id' element={<RecipeShow isLoggedIn={isLoggedIn}/>} />
           <Route path='/recipes' element={<RecipeList />} />
           <Route path='/search-results' element={<SearchResults />} />
           <Route exact path='/' element={<Home />} />

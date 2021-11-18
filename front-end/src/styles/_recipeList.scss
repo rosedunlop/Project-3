@@ -3,12 +3,14 @@
     text-align: center;
     padding-top: 20px;
     font-family: $logo;
+    color: $background;
   }
   p {
     text-align: center;
     font-family: $header;
     font-size: 20px;
     padding-top: 20px;
+    color: $background;
   }
 }
 
@@ -35,7 +37,7 @@
   width: 350px;
   margin: 10px;
   margin-bottom: 10px;
-  color: black;
+  color: $background;
   border-radius: 5px;
   position: relative;
   top: 0;
@@ -60,11 +62,11 @@
 
     .second-button {
       height: 40px;
-      background: black;
-      color: white;
+      background: $background;
+      color: $main-text;
       width: 40px;
       border-radius: 50%;
-      border: 3px solid black;
+      border: 3px solid $background;
       font-size: 21px;
       text-align: center;
       font-weight: 600;
@@ -73,16 +75,16 @@
     }
 
     .second-button:hover {
-      background-color: white;
-      color: black;
+      background-color: $main-text;
+      color: $background;
     }
     .clicked-button {
       height: 40px;
-      background: white;
-      color: black;
+      background: $background;
+      color: $main-text;
       width: 40px;
       border-radius: 50%;
-      border: 3px solid black;
+      border: 3px solid $background;
       font-size: 21px;
       text-align: center;
       font-weight: 600;
@@ -96,7 +98,7 @@
     height: 60px;
     overflow: hidden;
     a {
-      color: black;
+      color: $background;
     }
   }
   .para {

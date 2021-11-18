@@ -37,16 +37,43 @@
 
 @media screen and (min-width: 600px) {
   .modal {
+    .modal-content {
+      background-color: $main-text;
+    }
+    .modal-header {
+      background-color: $main-text;
+      border: $background;
+    }
     .modal-title {
       position: relative;
       margin-top: 30px;
       left: 70px;
+      color: $background;
     }
     .modal-body {
+      padding-top: 20px;
+      border: none;
+      Form {
+        background-color: $main-text;
+        .form-label {
+          color: $background;
+        }
+        .form-control {
+          background-color: $background;
+          color: white;
+          border: 2px solid $background;
+        }
+      }
+      background-color: $main-text;
       button {
         position: relative;
         left: 55px;
       }
+    }
+    .modal-footer {
+      background-color: $main-text;
+      border: $background;
+      color: $background;
     }
   }
 }
@@ -153,8 +180,9 @@ header {
     margin-top: 30px;
 
     button {
-      background-color: black;
-      border: black;
+      background-color: $background;
+      border: $background;
+      color: $main-text;
       height: 50px;
       width: 350px;
       margin-top: 30px;
@@ -162,9 +190,9 @@ header {
     }
 
     button:hover {
-      background-color: white;
-      color: black;
-      border: 3px solid black;
+      background-color: $main-text;
+      color: $background;
+      border: 3px solid $background;
     }
 
     .register-para {
@@ -178,8 +206,9 @@ header {
 
   .modal-footer {
     button {
-      background-color: grey;
-      border: grey;
+      background-color: $background;
+      border: $background;
+      color: $main-text;
       border-radius: 30px;
     }
   }

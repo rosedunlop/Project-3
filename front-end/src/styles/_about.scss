@@ -35,3 +35,9 @@ main {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .squad-photos {
+    flex-direction: column;
+  }
+}
