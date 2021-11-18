@@ -5,11 +5,12 @@
   background-color: #142f43;
   border: solid 2px #ffab4c;
   color: #ffab4c;
-  font-family: $content;
+  font-family: $header;
 }
 .form-head {
-  padding-top: 5px;
+  padding: 10px;
   align-self: center;
+  font-family: $logo;
 }
 .total-form {
   width: 100%;

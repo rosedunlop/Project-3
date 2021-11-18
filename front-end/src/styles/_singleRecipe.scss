@@ -8,6 +8,9 @@
 
       .info-div {
         text-align: center;
+        h2.singleRecipe-header {
+          font-family: $logo;
+        }
         p {
           font-size: 12px;
         }
@@ -152,6 +155,7 @@
   .single-recipe {
     h2 {
       text-align: center;
+      font-family: $logo;
     }
     .top-half {
       display: flex;
@@ -159,26 +163,46 @@
       padding-bottom: 20px;
       border-bottom: 2px solid $main-text;
       .image-div {
+        width: 50%;
+        height: 75vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         img {
-          width: 500px;
-          height: 500px;
+          width: 80%;
+          height: 80%;
           object-fit: cover;
+          border-radius: 4px;
         }
       }
       .info-div {
         width: 50%;
-        position: relative;
+        height: 75vh;
         left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $header;
 
         .info-contain {
           display: flex;
-          width: 40vw;
+          flex-direction: column;
+          width: 80%;
+          height: 80%;
           justify-content: space-between;
-          position: relative;
-          left: 70px;
+
+          .info-wrapper {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+            border: 2px dotted $main-text;
+            padding-top: 10px;
+            margin: 10px auto;
+          }
+
           .first-div {
             .one {
               font-size: 18px;
@@ -193,28 +217,26 @@
           }
         }
         .keywords {
-          position: relative;
-          top: 30px;
           text-align: center;
+          font-family: $logo;
+          letter-spacing: 1.5px;
         }
         .description-div {
-          position: relative;
-          left: 90px;
-          top: 70px;
-          width: 35vw;
           height: 20vh;
+
           p {
             font-size: 16px;
             text-align: center;
+            font-style: italic;
+            margin: 0 auto;
           }
         }
 
         .add-delete-buttons {
           display: flex;
           justify-content: center;
-          position: relative;
-          top: 70px;
-          right: 5px;
+          padding-top: 10px;
+
           button {
             margin: 10px;
             padding: 8px;
@@ -259,6 +281,7 @@
       }
     }
     .meth-ing {
+      font-family: $header;
       display: flex;
       border-bottom: 2px solid $main-text;
       padding-bottom: 10px;
@@ -281,6 +304,9 @@
 
   .tips-para {
     text-align: center;
+    padding-top: 10px;
+    font-family: $logo;
+    font-weight: 300;
   }
 
   .comments-container {

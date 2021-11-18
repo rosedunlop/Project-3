@@ -11,17 +11,17 @@ import { useNavigate } from 'react-router'
 const AddRecipeNew = () => {
   const navigate = useNavigate()
   const [data, setData] = useState({
-      title: '',
-      image: '',
-      description: '',
-      method: '',
-      ingredients: '',
-      keywords: '',
-      time: '',
-      servings: '',
-      tips: '',
-      difficulty: '',
-      author: ''
+    title: '',
+    image: '',
+    description: '',
+    method: '',
+    ingredients: '',
+    keywords: '',
+    time: '',
+    servings: '',
+    tips: '',
+    difficulty: '',
+    author: ''
   })
 
   const [isError, setIsError] = useState(false)
@@ -55,9 +55,9 @@ const AddRecipeNew = () => {
       setIsError(false)
       navigate(`/recipes/${response.data._id}`)
       window.alert('Your recipe has been added to the system')
-    } catch (err) { 
-        setIsError(true)
-        window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
+    } catch (err) {
+      setIsError(true)
+      window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
     }
   }
 
@@ -69,39 +69,40 @@ const AddRecipeNew = () => {
     console.log(data)
   }
 
-  const handleImageUrl = url => {
+  const handleImageUrl = (url) => {
     setData({ ...data, image: url })
   }
 
   //const formInputProps = { data, handleFormChange }
 
-
-    return (
-        <section className='working-page'>
-            <h3 className='form-head'>Add your own recipe</h3>
-            <form onSubmit={handleSubmit} className='total-form'>
-              <div className='top-div'>
-                <OtherForms handleFormChange={handleFormChange}/>
-                
+  return (
+    <section className='working-page'>
+      <h3 className='form-head'>Add your recipe</h3>
+      <form onSubmit={handleSubmit} className='total-form'>
+        <div className='top-div'>
+          <OtherForms handleFormChange={handleFormChange} />
+        </div>
+        <div className='bottom-div'>
+          <div className='bottom-form'>
+            <ImageUploadField
+              value={data.image}
+              name='image'
+              handleImageUrl={handleImageUrl}
+            />
+            {isError ? (
+              <div className='error'>
+                <p>Error. Please try again.</p>
               </div>
-              <div className='bottom-div'>
-                <div className="bottom-form">
-                  <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
-                  {isError ? (
-                  <div className='error'>
-                  <p>Error. Please try again.</p>
-                  </div>
-                  ) : (
-                  <></>
-                  )}
-                </div>
-              </div>
-              <div className='add-button'>
-                <input  type='submit' className ='click' value='Add Recipe' />
-              </div>
-          </form>
-        </section>
-    )
+            ) : (
+              <></>
+            )}
+          </div>
+        </div>
+        <div className='add-button'>
+          <input type='submit' className='click' value='Add Recipe' />
+        </div>
+      </form>
+    </section>
+  )
 }
 export default AddRecipeNew
-
