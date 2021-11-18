@@ -3,9 +3,13 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import { Squash as Hamburger } from 'hamburger-react'
-import Button from 'react-bootstrap/Button'
 
-const OffcanvasNav = ({ handleShowLogin, handleShowRegister }) => {
+const OffcanvasNav = ({
+  handleLogout,
+  isLoggedIn,
+  handleShowLogin,
+  handleShowRegister
+}) => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -22,20 +26,25 @@ const OffcanvasNav = ({ handleShowLogin, handleShowRegister }) => {
         <Offcanvas.Body>
           <div>
             <ul className='offcanvas-auth'>
-              <Button
-                className='button-one'
-                variant='primary'
-                onClick={handleShowLogin}
-              >
-                Login
-              </Button>
-              <Button
-                className='button-two'
-                variant='primary'
-                onClick={handleShowRegister}
-              >
-                Create an account
-              </Button>
+              {isLoggedIn ? (
+                <>
+                  <Link to='/account'>
+                    <button className='auth-button-account'>Account</button>
+                  </Link>
+                  <button className='auth-button' onClick={handleLogout}>
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button className='button-one' onClick={handleShowLogin}>
+                    Login
+                  </button>
+                  <button className='button-two' onClick={handleShowRegister}>
+                    Create an account
+                  </button>
+                </>
+              )}
             </ul>
           </div>
           <div>

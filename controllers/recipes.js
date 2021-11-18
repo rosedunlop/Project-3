@@ -39,9 +39,11 @@ export const addRecipe = async (req, res) => {
 export const updateRecipe = async (req, res) => {
   try {
     const { id } = req.params
-    const recipe = await Recipe.findByIdAndUpdate(id, req.body)
-    const updatedRecipe = await Recipe.findById(id)
-    return res.status(202).json(updatedRecipe)
+    const recipe = await Recipe.findById(id)
+    Object.assign(recipe, req.body)
+    await recipe.save({ validateModifiedOnly: true })
+    console.log(recipe)
+    return res.status(202).json(recipe)
   } catch (err) {
     console.log(err)
     return res.status(404).json({ message: 'Recipe Not Found' })

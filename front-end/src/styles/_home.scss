@@ -17,7 +17,7 @@ h1 a:hover {
 }
 
 .carousel {
-  height: 60vh;
+  height: 68vh;
   width: 100%;
   background-color: $background;
   .carousel-indicators {
@@ -38,7 +38,7 @@ h1 a:hover {
       display: flex;
       flex-direction: row-reverse;
       width: 100%;
-      height: 60vh;
+      height: 68vh;
 
       .img {
         width: 50vw;
@@ -185,6 +185,51 @@ h1 a:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .carousel {
+    width: 100vw;
+    height: 60vh;
+
+    .item {
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        .img {
+          width: 100vw;
+          height: 300px;
+          margin-bottom: 30px;
+          padding-left: 20px;
+          border: none;
+
+          .first-image {
+            width: 70vw;
+            height: 200px;
+            object-fit: cover;
+            position: absolute;
+            top: 250px;
+            right: -40px;
+          }
+        }
+        .caption {
+          width: 100vw;
+          height: 300px;
+          h1 {
+            width: 50vw;
+            position: relative;
+            top: 30px;
+            left: 40px;
+            height: 100px;
+            font-size: 30px;
+          }
+          p {
+            display: none;
+          }
+          .link {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .top-recipes {
     padding-top: 40px;
 
@@ -192,16 +237,17 @@ h1 a:hover {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      padding-left: 40px;
+      // padding-left: 40px;
 
       .oneRecipe {
         width: 80vw;
         border: none;
         padding-bottom: 5px;
-
-        img {
-          width: 100%;
-          height: 80%;
+        .description-container {
+          img {
+            width: 100%;
+            height: 200px;
+          }
         }
       }
     }
@@ -225,25 +271,22 @@ h1 a:hover {
         width: 30vw;
         height: 360px;
         padding: 10px;
-        img {
-          width: 335px;
-          height: 265px;
-        }
+        margin-top: 50px;
+        .description-container {
+          img {
+            width: 335px;
+            height: 265px;
+          }
 
-        .flex-container {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          width: 90%;
-          border: 2px solid blue;
-          position: absolute;
-          bottom: -90px;
-          padding-bottom: 20px;
-        }
-        .para {
-          color: #999;
-          // position: relative;
-          // top: 10px;
+          .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+          }
+          .para {
+            color: #999;
+          }
         }
       }
 

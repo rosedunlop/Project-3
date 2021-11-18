@@ -5,8 +5,11 @@ import React, { useState } from 'react'
 import OtherForms from '../components/AddRecipe/OtherInputs'
 import { getToken } from '../helpers/auth'
 import { ImageUploadField } from '../components/AddRecipe/ImageUploadFields'
+import { useNavigate } from 'react-router'
+//import { useParams } from 'react-router'
 
 const AddRecipeNew = () => {
+  const navigate = useNavigate()
   const [data, setData] = useState({
       title: '',
       image: '',
@@ -50,8 +53,8 @@ const AddRecipeNew = () => {
       const response = await axios(config)
       console.log(response.data)
       setIsError(false)
-      window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
-      // history.push(`/recipes/${response.data._id}`)
+      navigate(`/recipes/${response.data._id}`)
+      window.alert('Your recipe has been added to the system')
     } catch (err) { 
         setIsError(true)
         window.alert(`Submitting form data: ${JSON.stringify(data, null, 2)}`)
@@ -66,12 +69,6 @@ const AddRecipeNew = () => {
     console.log(data)
   }
 
-  // const handleChange = event => {
-  //   console.log('event.target.checked', event.target.checked)
-  //   const value = event.target.type === 'radio' ? event.target.checked : event.target.value
-  //   setData({ ...data, [event.target.name]: value })
-  // }
-
   const handleImageUrl = url => {
     setData({ ...data, image: url })
   }
@@ -82,7 +79,7 @@ const AddRecipeNew = () => {
     return (
         <section>
             <h1>Add your own recipe</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='total-form'>
               <div className='top-div'>
                 <OtherForms handleFormChange={handleFormChange}/>
                 <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
@@ -98,7 +95,7 @@ const AddRecipeNew = () => {
                   )}
                 </div>
               </div>
-              <div>
+              <div className='add-button'>
                 <input type='submit' value='Add Recipe' />
               </div>
           </form>

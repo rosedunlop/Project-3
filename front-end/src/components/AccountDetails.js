@@ -6,7 +6,7 @@ import { deleteUser } from '../helpers/api.js'
 import { Link, useNavigate } from 'react-router-dom'
 import { removeToken } from '../helpers/auth.js'
 
-const AccountDetails = ({ username, email, userId }) => {
+const AccountDetails = ({ username, email, userId, setIsLoggedIn }) => {
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
@@ -16,6 +16,7 @@ const AccountDetails = ({ username, email, userId }) => {
   const handleDelete = (event) => {
     event.preventDefault()
     removeToken()
+    setIsLoggedIn(false)
     deleteUser(userId)
     navigate('/')
   }
