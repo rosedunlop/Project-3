@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import RecipeHomeCard from '../components/RecipeHomeCard.js'
-import Carousel  from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel'
 import { Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -29,7 +29,13 @@ const Home = () => {
   console.log(filteredRecipes)
 
   const randomRecipe = recipes[Math.floor(Math.random() * recipes.length)]
-  console.log('Look here!', randomRecipe)
+
+  const randomRecipes = []
+  for (let i = 0; i < 3; i++) {
+    const randomRecipe = recipes[Math.floor(Math.random() * recipes.length)]
+    randomRecipes.push(randomRecipe)
+  }
+  console.log('Look here!', randomRecipes)
 
   if (isLoading) {
     return (
@@ -42,89 +48,117 @@ const Home = () => {
       </>
     )
   } else if (!isLoading) {
-    const titleStr =
-      randomRecipe.title.charAt(0).toUpperCase() +
-      randomRecipe.title.slice(1).toLowerCase()
-  
-    const titleArr = titleStr.split(' ')
-  
-   return (
+    randomRecipes.forEach((recipe) => {
+      const title = recipe.title
+      const titleStr =
+        title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()
+      const titleArr = titleStr.split(' ')
+      recipe.title = titleArr
+    })
+    console.log(randomRecipes)
+
+    return (
       <>
-        <Carousel className="carousel">
-        <Carousel.Item className="item">
-        <div className="container">  
-        <div className="img">
-         <img
-          className="first-image"
-          src={recipes[2].image}
-          alt="First slide"
-         />
-         </div>
-        <div className="caption">
-          <h1>{recipes[2].title}</h1>
-          <p>{recipes[2].description}</p>
-          <div className="link">
-         <Link to={`/recipes/${recipes[2]._id}`}>View recipe</Link>
-          <button className='button'>+</button>
-         </div>
-        </div>
-        </div>
-        </Carousel.Item>
-        <Carousel.Item className="item">
-         <div className='container'> 
-         <div className="img"> 
-         <img
-          className="first-image"
-          src={recipes[4].image}
-          alt="Second slide"
-        />
-        </div>
-       <div className="caption">
-         <h1>{recipes[4].title}</h1>
-         <p>{recipes[4].description}</p>
-         <div className="link">
-         <Link to={`/recipes/${recipes[4]._id}`}>View recipe</Link>
-         <button className='button'>+</button>
-         </div>
-       </div>
-       </div> 
-       </Carousel.Item>
-       <Carousel.Item className="item">
-         <div className="container">
-         <div className="img">
-          <img
-           className="first-image"
-           src={recipes[10].image}
-           alt="Third slide"
-          />
-         </div> 
-        <div className="caption">
-           <h1>{recipes[10].title}</h1>
-           <p>{recipes[10].description}</p>
-           <div className="link">
-           <Link to={`/recipes/${recipes[10]._id}`}>View recipe</Link>
-           <button className='button'>+</button>
-          </div>
-        </div>
-        </div>
-        </Carousel.Item>
-        </Carousel>
-          <div className='top-recipes'>
-            <h2 className='heading-popular'>Popular Recipes</h2>
-            <div className='recipeList'>
-              {filteredRecipes.map((recipe) => (
-                <div className='oneRecipe' key={recipe._id}>
-                  <RecipeHomeCard {...recipe} />
+        <Carousel className='carousel'>
+          <Carousel.Item className='item'>
+            <div className='container'>
+              <div className='img'>
+                <img
+                  className='first-image'
+                  src={randomRecipes[0].image}
+                  alt='First slide'
+                />
+              </div>
+              <div className='caption'>
+                <h1>
+                  <Link to={`/recipes/${randomRecipes[0]._id}`}>
+                    {randomRecipes[0].title.slice(0, -2).join(' ')}
+                    <br />
+                    <span> {randomRecipes[0].title.slice(-2).join(' ')}</span>
+                  </Link>
+                </h1>
+                <p>{randomRecipes[0].description}</p>
+                <div className='link'>
+                  <Link to={`/recipes/${randomRecipes[0]._id}`}>
+                    View recipe
+                  </Link>
+                  <button className='button'>+</button>
                 </div>
-              ))}
+              </div>
             </div>
+          </Carousel.Item>
+          <Carousel.Item className='item'>
+            <div className='container'>
+              <div className='img'>
+                <img
+                  className='first-image'
+                  src={randomRecipes[1].image}
+                  alt='Second slide'
+                />
+              </div>
+              <div className='caption'>
+                <h1>
+                  <Link to={`/recipes/${randomRecipes[1]._id}`}>
+                    {randomRecipes[1].title.slice(0, -2).join(' ')}
+                    <br />
+                    <span> {randomRecipes[1].title.slice(-2).join(' ')}</span>
+                  </Link>
+                </h1>
+                <p>{randomRecipes[1].description}</p>
+                <div className='link'>
+                  <Link to={`/recipes/${randomRecipes[1]._id}`}>
+                    View recipe
+                  </Link>
+                  <button className='button'>+</button>
+                </div>
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item className='item'>
+            <div className='container'>
+              <div className='img'>
+                <img
+                  className='first-image'
+                  src={randomRecipes[2].image}
+                  alt='Third slide'
+                />
+              </div>
+              <div className='caption'>
+                <h1>
+                  <Link to={`/recipes/${randomRecipes[0]._id}`}>
+                    {randomRecipes[2].title.slice(0, -2).join(' ')}
+                    <br />
+                    <span> {randomRecipes[2].title.slice(-2).join(' ')}</span>
+                  </Link>
+                </h1>
+                <p>{randomRecipes[2].description}</p>
+                <div className='link'>
+                  <Link to={`/recipes/${randomRecipes[2]._id}`}>
+                    View recipe
+                  </Link>
+                  <button className='button'>+</button>
+                </div>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+        <div className='top-recipes'>
+          <h2 className='heading-popular'>Popular Recipes</h2>
+          <div className='recipeList'>
+            {filteredRecipes.map((recipe) => (
+              <div className='oneRecipe' key={recipe._id}>
+                <RecipeHomeCard {...recipe} />
+              </div>
+            ))}
           </div>
-     </>     
-  )
-}
+        </div>
+      </>
+    )
+  }
 }
 
-  {/* <>
+{
+  /* <>
     <div className='main-recipe-container'>
     <div className='description'>
     <h1>
@@ -148,5 +182,6 @@ const Home = () => {
       </div>
       ))}
       </div>
-    </> */}
+    </> */
+}
 export default Home

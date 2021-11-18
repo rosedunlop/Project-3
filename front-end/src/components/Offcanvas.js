@@ -22,8 +22,20 @@ const OffcanvasNav = ({ handleShowLogin, handleShowRegister }) => {
         <Offcanvas.Body>
           <div>
             <ul className='offcanvas-auth'>
-              <Button className="button-one" variant="primary" onClick={handleShowLogin}>Login</Button>
-              <Button className="button-two" variant="primary" onClick={handleShowRegister}>Create an account</Button>     
+              <Button
+                className='button-one'
+                variant='primary'
+                onClick={handleShowLogin}
+              >
+                Login
+              </Button>
+              <Button
+                className='button-two'
+                variant='primary'
+                onClick={handleShowRegister}
+              >
+                Create an account
+              </Button>
             </ul>
           </div>
           <div>

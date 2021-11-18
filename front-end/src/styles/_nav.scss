@@ -17,7 +17,7 @@
     }
     a {
       text-decoration: none;
-      color: white;
+      color: $main-text;
     }
     li:hover {
       text-decoration: underline;
@@ -28,7 +28,7 @@
 
 .hamburger-react {
   z-index: 1046;
-  color: white;
+  color: $main-text;
   display: inline;
 }
 

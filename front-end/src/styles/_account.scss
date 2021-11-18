@@ -1,8 +1,11 @@
 .accountDetails-container {
-  width: 40%;
+  width: 35%;
   margin: 0 auto;
 
-
+  form {
+    width: 80%;
+    margin: 20px auto;
+  }
 }
 .nav-tabs {
   justify-content: center;
@@ -39,5 +42,15 @@
 
   button {
     margin: 20px;
+  }
+}
+
+.myRecipes-container {
+  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+
+  a {
+    color: black;
   }
 }

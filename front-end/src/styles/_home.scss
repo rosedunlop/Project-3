@@ -1,13 +1,25 @@
 * {
   box-sizing: border-box;
 }
+main {
+  background-color: $body;
+}
 span {
   font-weight: 900;
 }
+h1 a {
+  color: $main-text;
+  text-decoration: none;
+}
+h1 a:hover {
+  text-decoration: underline;
+  color: $main-text;
+}
+
 .carousel {
   height: 60vh;
   width: 100%;
-  background-color: black;
+  background-color: $background;
   .carousel-indicators {
     margin-left: 800px;
   }
@@ -31,6 +43,7 @@ span {
       .img {
         width: 50vw;
         border-left: 2px solid white;
+        border-radius: 5px;
 
         .first-image {
           width: 40vw;
@@ -39,13 +52,14 @@ span {
           position: relative;
           left: 50px;
           top: 60px;
+          border-radius: 5px;
         }
       }
 
       .caption {
         width: 50vw;
         padding-top: 50px;
-        color: white;
+        color: $main-text;
         font-family: $content;
         h1 {
           font-size: 60px;
@@ -64,7 +78,7 @@ span {
           flex-direction: column;
           justify-content: space-evenly;
           a {
-            color: white;
+            color: $main-text;
             text-decoration: none;
             font-size: 20px;
             font-weight: 300;
@@ -80,7 +94,7 @@ span {
         button {
           height: 40px;
           background: white;
-          color: black;
+          color: $main-text;
           width: 40px;
           border-radius: 50%;
           border: 3px solid white;
@@ -91,7 +105,7 @@ span {
           left: 435px;
         }
         .button:hover {
-          background: black;
+          background: $main-text;
           color: white;
         }
       }
@@ -115,25 +129,26 @@ span {
   font-size: 35px;
   font-family: $logo;
   margin: 50px auto;
+  color: $background;
 }
 .top-recipes {
   font-family: $header;
 
   .second-button {
     height: 40px;
-    background: black;
+    background: $main-text;
     color: white;
     width: 40px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid $main-text;
     font-size: 21px;
     text-align: center;
     font-weight: 600;
   }
   .second-button:hover {
     background: white;
-    border: 3px solid black;
-    color: black;
+    border: 3px solid $main-text;
+    color: $main-text;
   }
 }
 
@@ -160,7 +175,7 @@ span {
 .heading-four {
   a {
     text-decoration: none;
-    color: black;
+    color: $main-text;
     font-size: 20px;
     font-weight: 500;
   }

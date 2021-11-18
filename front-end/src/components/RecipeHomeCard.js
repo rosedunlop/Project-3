@@ -23,8 +23,8 @@ const RecipeHomeCard = ({ image, title, time, id, keywords }) => {
 
   return (
     <>
-      <div className="toast-alert">
-      <SaveToast showToast={showToast} setShowToast={setShowToast}/>
+      <div className='toast-alert'>
+        <SaveToast showToast={showToast} setShowToast={setShowToast} />
       </div>
       <img src={image} alt='' />
       <h4 className='heading-four'>

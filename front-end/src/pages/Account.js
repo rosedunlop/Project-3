@@ -3,6 +3,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import AccountDetails from '../components/AccountDetails'
 import SavedRecipes from '../components/SavedRecipes'
+import MyRecipes from '../components/MyRecipes'
 import { fetchUser } from '../helpers/api.js'
 
 const Account = ({ setIsLoggedIn }) => {
@@ -17,7 +18,7 @@ const Account = ({ setIsLoggedIn }) => {
   return (
     <div className='account-container'>
       <Tabs
-        defaultActiveKey='profile'
+        defaultActiveKey='account'
         id='uncontrolled-tab-example'
         className='mb-3'
       >
@@ -35,7 +36,12 @@ const Account = ({ setIsLoggedIn }) => {
             recipes={accountDetails.likedRecipes}
           />
         </Tab>
-        <Tab eventKey='myRecipes' title='My recipes'></Tab>
+        <Tab eventKey='myRecipes' title='My recipes'>
+          <MyRecipes
+            userId={accountDetails._id}
+            recipes={accountDetails.createdRecipes}
+          />
+        </Tab>
       </Tabs>
     </div>
   )
