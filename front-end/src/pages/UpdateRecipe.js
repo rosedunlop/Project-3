@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { getToken } from '../helpers/auth'
-import OtherForms from '../components/AddRecipe/OtherInputs'
+import EditRecipeForms from '../components/EditRecipeForms'
 import { fetchRecipe } from '../helpers/api'
 import { ImageUploadField } from '../components/AddRecipe/ImageUploadFields'
 
@@ -43,10 +43,11 @@ const UpdateRecipe = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        console.log('Chicken')
 
         const config = {
             method: 'put',
-            url: `/api/recipes/${id}/edit`,
+            url: `/api/recipes/${id}`,
             headers: {
               Authorization: `Bearer ${getToken()}`,
               'Content-Type': 'application/json'
@@ -57,8 +58,9 @@ const UpdateRecipe = () => {
 
         try {
             const response = await axios(config)
-            navigate(`/recipes/${id}`)
             console.log('Try Data',response.data)
+            navigate(`/recipes/${id}`)
+            
         } catch (err) {
             console.log(err)
         }
@@ -87,21 +89,23 @@ const UpdateRecipe = () => {
         <>
         <section>
             <h3>Edit This Recipe</h3>
-            <div className='top-div'>
-                <OtherForms formInputProps={formInputProps}/>
-                <ImageUploadField value={data.image} name='image' handleImageUrl={handleImageUrl}/>
-              </div>
-              <div className='bottom-div'>
-                <div className="bottom-form">
-                  
+            <form onSubmit={handleSubmit}>
+                <div className='top-div'>
+                    <EditRecipeForms formInputProps={formInputProps}/>
+                    <ImageUploadField name='image' handleImageUrl={handleImageUrl}/>
                 </div>
-              </div>
-            <div>
-                <input type='submit' handleSubmit={handleSubmit} value='Save Updates'/>
-            </div>
-            <div>
-                <input type='button' onClick={goBack} value='Cancel'/>
-            </div>
+                <div className='bottom-div'>
+                    <div className="bottom-form">
+                    
+                    </div>
+                </div>
+                <div>
+                    <input type='submit' value='Save Updates'/>
+                </div>
+                <div>
+                    <input type='button' onClick={goBack} value='Cancel'/>
+                </div>
+            </form>
         </section>
         </>
     )

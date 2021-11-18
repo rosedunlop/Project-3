@@ -41,7 +41,8 @@ export const updateRecipe = async (req, res) => {
     const { id } = req.params
     const recipe = await Recipe.findById(id)
     Object.assign(recipe, req.body)
-    const updatedRecipe = await Recipe.findById(id)
+    await recipe.save({ validateModifiedOnly: true })
+    console.log(recipe)
     return res.status(202).json(recipe)
   } catch (err) {
     console.log(err)
