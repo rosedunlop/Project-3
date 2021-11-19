@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [recipes, setRecipes] = useState([])
-  // const [recipe, setRecipe] = useState(null)
-  // const [title, setTitle] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [randomRecipes, setRandomRecipes] = useState([])
 

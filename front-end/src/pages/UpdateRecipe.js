@@ -26,17 +26,6 @@ const UpdateRecipe = () => {
 
     console.log(id)
 
-    // const fetchRecipe = async (_id) => {
-    //     const config = {
-    //       method: 'get',
-    //       url: `/api/recipes/${_id}`,
-    //       headers: {}
-    //     }
-      
-    //     const response = await axios(config)
-    //     return response.data
-    // }
-
     useEffect(() => {
         fetchRecipe(id).then(setData)
     }, [id])

@@ -73,7 +73,7 @@ const AddComment = ({ setRecipe, starRating, setStarRating, hover, setHover }) =
                 onClick={() => setStarRating(ratingValue)}
                 onChange={handleRatingChange}
                 />
-                <FaStar color={ratingValue <= (hover || starRating) ? '#ffc107' : '#e4e5e9'} size={20}
+                <FaStar color={ratingValue <= (hover || starRating) ? '#ffc107' : 'white'} size={20}
                 onMouseEnter={() => setHover(ratingValue)}
                 onMouseLeave={() => setHover(null)}
                 /> 
