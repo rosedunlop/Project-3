@@ -828,7 +828,7 @@ export default [
     image:
       'https://www.halfbakedharvest.com/wp-content/uploads/2021/04/Roasted-Tomato-Basil-and-Feta-Orzo-1-700x1050.jpg',
     description:
-      'Roasted Tomato Basil and Feta Orzo…for a quick and simple dinner. Orzo pasta, sweet and juicy roasted cherry tomatoes, garlic, herbs, feta cheese, and toasted pine nuts, all combined to create a quick pasta dinner. Finish it off with crispy, salty prosciutto for a truly delicious pasta dish. Every bite bursts in your mouth…it’s pretty hard to beat this simple spring/summer pasta.',
+      'Roasted Tomato Basil and Feta Orzo…for a quick and simple dinner. Orzo pasta, sweet and juicy roasted cherry tomatoes, garlic, herbs, feta cheese, and toasted pine nuts, all combined to create a quick pasta dinner.',
     method: [
       'Preheat the oven to 425° F.',
       'In a roasting pan, combine 3 tablespoons olive oil, tomatoes, garlic, thyme, chili powder, 1 teaspoon honey, and a pinch each of salt and pepper. Roast for 20-25 minutes, until the tomatoes burst. Finley chop the garlic.',

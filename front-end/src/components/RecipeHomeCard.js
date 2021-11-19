@@ -30,12 +30,10 @@ const RecipeHomeCard = ({ image, title, time, id, keywords }) => {
         <Link to={`/recipes/${id}`}>
           <img src={image} alt='' />
         </Link>
-        <h4 className='heading-four'>
-          <Link to={`/recipes/${id}`}>{titleStr}</Link>
-        </h4>
         <div className='flex-container'>
-          <p>{keywordsStr}</p>
-          <p className='para'>{`Cook: ${time} mins`}</p>
+          <h4 className='heading-four'>
+            <Link to={`/recipes/${id}`}>{titleStr}</Link>
+          </h4>
           {!saved ? (
             <>
               <button className='second-button' onClick={handleClick}>
@@ -49,6 +47,10 @@ const RecipeHomeCard = ({ image, title, time, id, keywords }) => {
               </Link>
             </>
           )}
+        </div>
+        <div className='flex-container'>
+          <p>{keywordsStr}</p>
+          <p className='para'>{`Cook: ${time} mins`}</p>
         </div>
       </div>
     </>
