@@ -7,7 +7,7 @@ import { fetchRecipe } from '../helpers/api'
 const RecipeShow = ({ isLoggedIn }) => {
     const [recipe, setRecipe] = useState(null)
     const { id } = useParams()
-    console.log('End of the world')
+    
 
     useEffect(() => {
         fetchRecipe(id).then(setRecipe)
