@@ -20,60 +20,50 @@ const EditRecipeForms = ({ handleFormChange, formInputProps  }) => {
   const handleTitleChange = (event) => {
     setTitle(event.target.value)
     formInputProps.handleFormChange('title', event.target.value)
-    console.log(title)
   }
 
   const handleTimeChange = (event) => {
     setTime(event.target.value)
     formInputProps.handleFormChange('time', event.target.value)
-    console.log(time)
   }
 
   const handleServingsChange = (event) => {
     setServings(event.target.value)
     formInputProps.handleFormChange('servings', event.target.value)
-    console.log(servings)
   }
 
   const handleKeywordsChange = (event) => {
     setKeywords(event.target.value)
     formInputProps.handleFormChange('keywords', event.target.value)
-    console.log(keywords)
   }
 
   const handleTipsChange = (event) => {
     setTips(event.target.value)
     formInputProps.handleFormChange('tips', event.target.value)
-    console.log(tips)
   }
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value)
     formInputProps.handleFormChange('description', event.target.value)
-    console.log(description)
   }
 
   const handleMethodChange = (event) => {
     setMethod(event.target.value)
     formInputProps.handleFormChange('method', event.target.value)
-    console.log(method)
   }
   const handleIngredientsChange = (event) => {
     setIngredients(event.target.value)
     formInputProps.handleFormChange('ingredients', event.target.value)
-    console.log(ingredients)
   }
 
   const handleAuthorChange = (event) => {
     setAuthor(event.target.value)
     formInputProps.handleFormChange('author', event.target.value)
-    console.log(author)
   }
 
   const handleDifficultyChange = (event) => {
     setDifficulty(event.target.value)
     formInputProps.handleFormChange('difficulty', event.target.value)
-    console.log(difficulty)
   }
 
     return (

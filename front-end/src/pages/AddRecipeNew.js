@@ -1,12 +1,9 @@
 import axios from 'axios'
 import React, { useState } from 'react'
-// import { useHistory } from 'react-router'
-//import { getAxiosRequestConfig } from '../helpers/api'
 import OtherForms from '../components/AddRecipe/OtherInputs'
 import { getToken } from '../helpers/auth'
 import { ImageUploadField } from '../components/AddRecipe/ImageUploadFields'
 import { useNavigate } from 'react-router'
-//import { useParams } from 'react-router'
 
 const AddRecipeNew = () => {
   const navigate = useNavigate()
@@ -25,13 +22,6 @@ const AddRecipeNew = () => {
   })
 
   const [isError, setIsError] = useState(false)
-
-  // const handleError = (error) => {
-  //   if (error.response) {
-  //     setErrorInfo(error.response.data)
-  //     setIsError(true)
-  //   }
-  // }
 
   const handleSubmit = async (event) => {
     console.log('button pressed')
