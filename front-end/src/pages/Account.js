@@ -4,7 +4,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 import AccountDetails from '../components/AccountDetails'
 import SavedRecipes from '../components/SavedRecipes'
-import MyRecipes from '../components/MyRecipes'
+
 import { fetchUser } from '../helpers/api.js'
 
 const Account = ({ setIsLoggedIn }) => {
@@ -51,10 +51,10 @@ const Account = ({ setIsLoggedIn }) => {
             />
           </Tab>
           <Tab eventKey='myRecipes' title='My recipes'>
-            <MyRecipes
+            {/* <MyRecipes
               userId={accountDetails._id}
               recipes={accountDetails.createdRecipes}
-            />
+            /> */}
           </Tab>
         </Tabs>
       </div>
