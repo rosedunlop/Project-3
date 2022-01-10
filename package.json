@@ -7,6 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "serve": "npx nodemon index.js",
     "seed": "node db/seeds.js",
     "build": "cd client && yarn && yarn build"
