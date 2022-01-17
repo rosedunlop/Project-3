@@ -22,6 +22,11 @@ Project three was my first experience creating a full-stack MERN application. Th
 
 **You will find the deployed version here:** https://aioli-app.herokuapp.com/
 
+If you wish to see all the features you can use these details below to login:
+
+**username:** project-3
+**password:** project-3
+
 ### Brief
 
 - Build a full-stack MERN application - with your own front-end and back-end.
