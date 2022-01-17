@@ -64,8 +64,6 @@ You will find the deployed version here: https://aioli-app.herokuapp.com/
 - Figma
 - Heroku (deployment)
 
----
-
 ## Approach Taken
 
 ### Day One: Planning
@@ -83,8 +81,6 @@ After this we began to list tasks involved in both the back-end and the front-en
 ---
 
 ![](images/Asana.png)
-
----
 
 As this was our first group project we decided that for the first few days of the project we would push to GitHub together to ensure that any merge conflicts were resolved correctly.
 
