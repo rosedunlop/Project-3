@@ -66,9 +66,9 @@ You will find the deployed version here: https://aioli-app.herokuapp.com/
 
 ---
 
-### Approach Taken
+## Approach Taken
 
-**Day One: Planning**
+### Day One: Planning
 
 After we had come up with our idea for the recipe app, we started setting out what we wanted each page and component to look like for the app. We also planned out what each of our routes, controllers and what the models would consist of. We ended up deciding to have two models: the User and the Recipe model.
 
@@ -88,7 +88,7 @@ After this we began to list tasks involved in both the back-end and the front-en
 
 As this was our first group project we decided that for the first few days of the project we would push to GitHub together to ensure that any merge conflicts were resolved correctly.
 
-**Day Two - Building the Back-End:**
+### Day Two - Building the Back-End:
 
 When I began creating the recipe model, we had already discussed as a group what fields we wanted to have in it i.e. title, description and ingredients, which therefore made up the main structure of the schema. I then created a referenced relationship with the User model called ‘owner’ as we wanted each recipe to have an owner. Also in order for each recipe to have its own comment section, I created a new schema called commentSchema which had ratings, text and an owner - which again was a referenced relationship with the User model. I then created an embedded relationship between the comment schema and the recipe schema, by storing it under the key value of ‘comments’.
 
@@ -173,7 +173,7 @@ export const deleteAComment = async (req, res) => {
 
 ```
 
-**Day 3-7 - Front-End:**
+### Day 3-7 - Front-End:
 
 After we had finished setting up the back-end and all our routes were working, we as a group set up our React app. Once we had installed all the packages we required and tested a request to our backend using http proxy middleware we split off and focussed on our individual tasks. My tasks included creating the home page, register, login and the comment sections on each recipe page.
 
@@ -317,7 +317,7 @@ return (
 
 ```
 
-**Day 8-9 - Stretch Goals/Styling:**
+### Day 8-9 - Stretch Goals/Styling:ß
 
 One of our main stretch goals was having responsive mobile styling. I took on this task in the final couple of days we had left of the project and ensured that every page on the website had mobile styling to ensure that users could use the app on their mobiles too. I felt this was a really nice feature to have and added to the complexity and slickness of the app.
 
@@ -325,7 +325,7 @@ I also then put some work into the footer changing the style and the information
 
 On the final day we all spent time removing console logs, making final styling improvements and reseeding our database. We also made final decisions on colour schemes and then implemented the colours into each page.
 
--
+---
 
 ### Final Product
 
