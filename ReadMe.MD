@@ -12,6 +12,8 @@
 - Future features and improvements
 - Key Learnings
 
+---
+
 ### Project Overview
 
 Project three was my first experience creating a full-stack MERN application. There were three of us in my group and after some discussion we came up with the idea that we wanted to create a recipe app and we called it Aioli. This would be an app where users could browse our library of recipes, have an account, add their own recipes, review recipes and save favourite recipes to their account.
@@ -276,7 +278,7 @@ const handleSubmit = async (event) => {
 
 ```
 
-#### Comments
+### Comments
 
 For the comments section I had two components to make. First the form where a user would post a comment and second the area which would display the comments posted by the user.
 
