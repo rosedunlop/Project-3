@@ -18,7 +18,7 @@
 
 Project three was my first experience creating a full-stack MERN application. There were three of us in my group and after some discussion we came up with the idea that we wanted to create a recipe app and we called it Aioli. This would be an app where users could browse our library of recipes, have an account, add their own recipes, review recipes and save favourite recipes to their account.
 
-![](images/first-image.png)
+![](images/Aioli.png)
 
 **You will find the deployed version here:** https://aioli-app.herokuapp.com/
 
