@@ -16,9 +16,9 @@
 
 Project three was my first experience creating a full-stack MERN application. There were three of us in my group and after some discussion we came up with the idea that we wanted to create a recipe app and we called it Aioli. This would be an app where users could browse our library of recipes, have an account, add their own recipes, review recipes and save favourite recipes to their account.
 
-You will find the deployed version here: https://aioli-app.herokuapp.com/
-
 ![](images/first-image.png)
+
+You will find the deployed version here: https://aioli-app.herokuapp.com/
 
 ### Brief
 
@@ -80,7 +80,11 @@ After we had come up with our idea for the recipe app, we started setting out wh
 
 After this we began to list tasks involved in both the back-end and the front-end that needed to be completed. We spent a decent amount of time discussing which areas we would work together on as a group and which tasks we would divide between us. We ended up deciding that we would create the back-end together to ensure we are all familiar with the models and then divide front-end tasks equally between us. We used Asana to keep track of what needed to be done:
 
+---
+
 ![](images/Asana.png)
+
+---
 
 As this was our first group project we decided that for the first few days of the project we would push to GitHub together to ensure that any merge conflicts were resolved correctly.
 
@@ -173,7 +177,7 @@ export const deleteAComment = async (req, res) => {
 
 After we had finished setting up the back-end and all our routes were working, we as a group set up our React app. Once we had installed all the packages we required and tested a request to our backend using http proxy middleware we split off and focussed on our individual tasks. My tasks included creating the home page, register, login and the comment sections on each recipe page.
 
-**_Home Page_**
+**Home Page**
 
 For the Home page I wanted to showcase three random featured recipes from our database of recipes in a carousel to begin with. I also then wanted to showcase six featured/popular recipes that users could select and view if they liked the look of them. To do both of these things I firstly made a general get request for all the recipes from our back-end, and set the data from the response to a state variable which I could then use to display on the front end.
 
@@ -222,7 +226,7 @@ const Home = () => {
 
 I then manipulated the recipes array by firstly slicing out six recipes to be mapped out in the featured section and in order to have three random recipes displayed in the carousel a for loop was used to pick three random items out of the array. I used React Bootstrap for the carousel to make sure the styling of the carousel was professional, I felt this was important given that the home page is the first thing the user sees.
 
-**_Register and Login_**
+**Register and Login**
 
 For both the register and login components, I had multiple form inputs to create and make sure they hit the back-end properly using post requests. I therefore had to approach this task methodically due to complexity and scale of the task. I also had to use Local Storage to store the user’s token, if they successfully entered their details correctly. This was essential to our app's functionality, as it allowed us to restrict particular aspects of the website only to users who had accounts.
 
@@ -276,7 +280,7 @@ const handleSubmit = async (event) => {
 
 ```
 
-**_Comments_**
+**Comments**
 
 For the comments section I had two components to make. First the form where a user would post a comment and second the area which would display the comments posted by the user.
 
@@ -320,6 +324,8 @@ One of our main stretch goals was having responsive mobile styling. I took on th
 I also then put some work into the footer changing the style and the information displayed. I also ensured that the login and register links were responsive and would change to logout and account links when the user was logged in.
 
 On the final day we all spent time removing console logs, making final styling improvements and reseeding our database. We also made final decisions on colour schemes and then implemented the colours into each page.
+
+-
 
 ### Final Product
 
