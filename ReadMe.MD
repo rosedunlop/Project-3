@@ -173,7 +173,7 @@ export const deleteAComment = async (req, res) => {
 
 After we had finished setting up the back-end and all our routes were working, we as a group set up our React app. Once we had installed all the packages we required and tested a request to our backend using http proxy middleware we split off and focussed on our individual tasks. My tasks included creating the home page, register, login and the comment sections on each recipe page.
 
-**Home Page**
+### Home Page
 
 For the Home page I wanted to showcase three random featured recipes from our database of recipes in a carousel to begin with. I also then wanted to showcase six featured/popular recipes that users could select and view if they liked the look of them. To do both of these things I firstly made a general get request for all the recipes from our back-end, and set the data from the response to a state variable which I could then use to display on the front end.
 
@@ -222,7 +222,7 @@ const Home = () => {
 
 I then manipulated the recipes array by firstly slicing out six recipes to be mapped out in the featured section and in order to have three random recipes displayed in the carousel a for loop was used to pick three random items out of the array. I used React Bootstrap for the carousel to make sure the styling of the carousel was professional, I felt this was important given that the home page is the first thing the user sees.
 
-**Register and Login**
+### Register and Login
 
 For both the register and login components, I had multiple form inputs to create and make sure they hit the back-end properly using post requests. I therefore had to approach this task methodically due to complexity and scale of the task. I also had to use Local Storage to store the user’s token, if they successfully entered their details correctly. This was essential to our app's functionality, as it allowed us to restrict particular aspects of the website only to users who had accounts.
 
@@ -276,7 +276,7 @@ const handleSubmit = async (event) => {
 
 ```
 
-**Comments**
+#### Comments
 
 For the comments section I had two components to make. First the form where a user would post a comment and second the area which would display the comments posted by the user.
 
