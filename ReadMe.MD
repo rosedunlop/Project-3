@@ -20,7 +20,7 @@ Project three was my first experience creating a full-stack MERN application. Th
 
 ![](images/first-image.png)
 
-You will find the deployed version here: https://aioli-app.herokuapp.com/
+**You will find the deployed version here:** https://aioli-app.herokuapp.com/
 
 ### Brief
 
