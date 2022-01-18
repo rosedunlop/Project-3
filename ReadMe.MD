@@ -27,6 +27,11 @@ If you wish to see all the features you can use these details below to login:
 **username:** project-3
 **password:** project-3
 
+### Team Members
+
+- Hannah Hill - https://github.com/hannah-hill
+- Ed Chamberlain - https://github.com/Chameh96
+
 ### Brief
 
 - Build a full-stack MERN application - with your own front-end and back-end.
